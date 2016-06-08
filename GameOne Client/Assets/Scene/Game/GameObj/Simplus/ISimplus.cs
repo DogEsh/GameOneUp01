@@ -7,10 +7,9 @@ using UnityEngine;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    interface ISimplus
+    interface ISimplus : IGameObj
     {
         void UpdateInfo(ISimplusInfo info);
-        void Destroy();
         bool IsFocused(Vector2 focusPos);
     }
 }

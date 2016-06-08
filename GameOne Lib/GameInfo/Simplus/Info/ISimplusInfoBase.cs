@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SimpleTeam.GameOne.GameInfo
 {
-    public interface ISimplusInfoBase : IGameID
+    public interface ISimplusInfoBase : IGameObjID
     {
         IParty Party { get; }
         ISimplusHP HP { get; }

@@ -6,7 +6,7 @@ using System.Text;
 namespace SimpleTeam.GameOne.GameInfo
 {
     using GameID = UInt16;
-    public interface IGameID
+    public interface IGameObjID
     {
         GameID ID { get; }
     }

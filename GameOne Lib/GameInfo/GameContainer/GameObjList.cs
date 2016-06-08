@@ -7,7 +7,7 @@ using System.Text;
 namespace SimpleTeam.GameOne.GameInfo
 {
     public class GameObjList<T> : IGameObjContainer<T>
-        where T : IGameID
+        where T : IGameObjID
     {
         private List<T> _container;
 

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
+using SimpleTeam.GameOne.GameInfo;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    class SimplusLink : ISimplusLink
+    abstract class GameObjBase : MonoBehaviour, IGameObj
     {
         public ushort ID
         {

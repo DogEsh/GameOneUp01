@@ -8,45 +8,54 @@ namespace SimpleTeam.GameOne.Scene
     using GameObjID = UInt16;
     class GameMap : MonoBehaviour, IGameMap
     {
-        private IMapInfo _mapInfo;
+        private IMapInfo _info;
         private Dictionary<GameObjID, ISimplus> _simpluses = null;
+
 
         private string _pathSimplus = "wtf";
         private GameObject _simplusPrefab;
+
+        public ushort ID
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
 
         private void Start()
         {
             _simplusPrefab = Resources.Load<GameObject>(_pathSimplus);
         }
         //NetworkMap
-        public void SetToInit(IMapInfo mapInfo)
+        public void SetToInitInfo(IMapInfo info)
         {
-            _mapInfo = mapInfo;
-            Clear();
-            Init();
+            _info = info;
+            ClearInfo();
+            InitInfo();
         }
-        public void SetToUpdate(IMapInfo mapInfo)
+        public void SetToUpdateInfo(IMapInfo info)
         {
-            _mapInfo = mapInfo;
-            Update();
+            _info = info;
+            UpdateInfo();
         }
 
-        private void Update()
+        private void UpdateInfo()
         {
-            foreach (ISimplusInfo s in _mapInfo.GetContainerSimplus())
+            foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
                 _simpluses[s.ID].UpdateInfo(s);
             }
         }
-        private void Init()
+        private void InitInfo()
         {
             _simpluses = new Dictionary<GameObjID, ISimplus>();
-            foreach (ISimplusInfo s in _mapInfo.GetContainerSimplus())
+            foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
                 _simpluses.Add(s.ID, new Simplus());
             }
         }
-        private void Clear()
+        private void ClearInfo()
         {
             if (_simpluses != null)
             {
@@ -70,6 +79,21 @@ namespace SimpleTeam.GameOne.Scene
                 }
             }
             return null;
+        }
+
+        public void SetToInit(IMapInfo mapInfo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetToUpdate(IMapInfo mapInfo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Destroy()
+        {
+            throw new NotImplementedException();
         }
     }
 }

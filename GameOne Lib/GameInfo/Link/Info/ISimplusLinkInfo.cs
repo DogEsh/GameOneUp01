@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SimpleTeam.GameOne.GameInfo
 {
-    public interface ISimplusLinkInfo : IGameID
+    public interface ISimplusLinkInfo : IGameObjID
     {
         SimplusInfo Source { get; set; }
         SimplusInfo Destination { get; set; }

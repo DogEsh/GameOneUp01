@@ -13,6 +13,15 @@ namespace SimpleTeam.GameOne.Scene
 
         private const string _pathLink = "wtf";
         private GameObject _linkPrefab;
+
+        public ushort ID
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         private void Start()
         {
             _info = null;
