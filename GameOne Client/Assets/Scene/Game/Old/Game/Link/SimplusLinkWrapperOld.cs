@@ -21,7 +21,7 @@ namespace SimpleTeam.GameOne.Scene
             _partusContainer = new List<GameObject>();
 
             Debug.Log("Simpl Link Start");
-            LinkSprite = Resources.Load("LinkPart", typeof(Sprite)) as Sprite;
+            LinkSprite = Resources.Load("Game/Textures/LinkPart", typeof(Sprite)) as Sprite;
 
             _pixelsPerUnit = LinkSprite.pixelsPerUnit;
             _width = LinkSprite.rect.width;
