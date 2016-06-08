@@ -8,6 +8,6 @@ namespace SimpleTeam.GameOne.Scene
 {
     interface IGameObj : IGameID
     {
-        void Destroy();
+        void RequestDestroy();
     }
 }

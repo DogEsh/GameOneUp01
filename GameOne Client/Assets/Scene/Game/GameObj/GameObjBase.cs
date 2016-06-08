@@ -9,15 +9,12 @@ namespace SimpleTeam.GameOne.Scene
 {
     abstract class GameObjBase : MonoBehaviour, IGameObj
     {
-        public ushort ID
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public GameObject MyInstance;
+        public abstract ushort ID { get; }
 
-        public void Destroy()
+        public abstract void Destroy();
+
+        public void RequestDestroy()
         {
             throw new NotImplementedException();
         }

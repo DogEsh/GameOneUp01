@@ -15,13 +15,7 @@ namespace SimpleTeam.GameOne.Scene
         private string _pathSimplus = "wtf";
         private GameObject _simplusPrefab;
 
-        public ushort ID
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public ushort ID {get {return 0;}}
 
         private void Start()
         {
