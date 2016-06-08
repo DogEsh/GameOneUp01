@@ -1,11 +1,12 @@
 ﻿using SimpleTeam.GameOne.GameInfo;
+using UnityEngine;
 
 namespace SimpleTeam.GameOne.Scene
 {
     interface ICursor
     {
-        IObj2D Source { get; set; }
-        IObj2D Destination { get; set; }
+        Vector2 GetSource();
+        Vector2 GetDestination();
         void SetMouse(IMouseManager mouse);
     }
 }

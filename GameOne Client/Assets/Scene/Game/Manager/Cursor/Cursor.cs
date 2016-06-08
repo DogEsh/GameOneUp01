@@ -10,52 +10,56 @@ namespace SimpleTeam.GameOne.Scene
     class Cursor : MonoBehaviour, ICursor
     {
         public GameObject MyInstance;
-        IObj2D _source;
-        IObj2D _destination;
+        DragInfo _dragInfo = new DragInfo();
+        private Sprite _linkSprite;
 
-        public IObj2D Source
+        public Vector2 GetSource()
         {
-            get
-            {
-                return _source;
-            }
-
-            set
-            {
-                _source = value;
-            }
+            return _dragInfo.GetPosSource();
         }
-
-        public IObj2D Destination
+        public Vector2 GetDestination()
         {
-            get
-            {
-                return _destination;
-            }
-
-            set
-            {
-                _destination = value;
-            }
+            return _dragInfo.GetPosDestination();
         }
-
         private void Start()
         {
-            MyInstance.
+            MyInstance.AddComponent<SpriteRenderer>();
+            _linkSprite = Resources.Load("GameOld/Textures/Arrow", typeof(Sprite)) as Sprite;
+            MyInstance.GetComponent<SpriteRenderer>().sprite = _linkSprite;
+            MyInstance.SetActive(true);
         }
 
+        private void Update()
+        {
+            UpdateInstance();
+
+            //MyInstance.transform.localScale = new Vector2(_destination.Pos.x - _source.Pos.x, _destination.Pos.y - _source.Pos.y);
+        }
+        private void UpdateInstance()
+        {
+            MyInstance.transform.position = _dragInfo.GetPosSource();
+        }
 
         public void SetMouse(IMouseManager mouse)
         {
+            ISimplus s = mouse.FocusSimplus;
+            IObj2D obj;
+            if (s == null) obj = new Point(mouse.Pos);
+            else obj = s.Obj2D;
+
+
             if (HelperMouseState.Down == mouse.State.Get())
             {
-                _source = mouse.FocusObj;
-                _destination = mouse.FocusObj;
+                _dragInfo.SetSource(obj);
+                _dragInfo.SetDestination(obj);
+                UpdateInstance();
                 MyInstance.SetActive(true);
+               
+
             }
             if (HelperMouseState.Pressed == mouse.State.Get())
             {
-                _destination = mouse.FocusObj;
+                _dragInfo.SetDestination(obj);
             }
             if (HelperMouseState.Up == mouse.State.Get())
             {

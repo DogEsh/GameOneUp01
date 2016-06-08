@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command\CommandSendMessageScene.cs" />
+    <Compile Include="GameInfo\Obj2D\DragInfo.cs" />
     <Compile Include="Parameter\MessageManager\IParametersMessagesManager.cs" />
     <Compile Include="Parameter\MessageManager\ParametersMessagesManager.cs" />
     <Compile Include="Parameter\Main\ParameterMain.cs" />

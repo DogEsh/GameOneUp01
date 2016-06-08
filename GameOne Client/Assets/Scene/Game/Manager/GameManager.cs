@@ -32,15 +32,9 @@ namespace SimpleTeam.GameOne.Scene
         private void Update()
         {
             _mouse.Update();
-            _mouse.FocusObj = GetFocusObj2D();
+            _mouse.FocusSimplus = _map.GetFocusedSimplus(_mouse.Pos);
             _cursor.SetMouse(_mouse);
 
-        }
-        private IObj2D GetFocusObj2D()
-        {
-            ISimplus s = _map.GetFocusedSimplus(_mouse.Pos);
-            if (s == null) return null;
-            return s.Obj2D;
         }
     }
 }

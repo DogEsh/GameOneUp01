@@ -5,15 +5,15 @@ namespace SimpleTeam.GameOne.Scene
 {
     class MouseManager : IMouseManager
     {
-        public IObj2D _point = new Point(new Vector2());
+        public Vector2 _pos;
         public MouseButtonState _state = new MouseButtonState();
-        private IObj2D _focusObj;
+        private ISimplus _focusSimplus;
 
         public Vector2 Pos
         {
             get
             {
-                return _point.Pos;
+                return _pos;
             }
         }
 
@@ -25,23 +25,21 @@ namespace SimpleTeam.GameOne.Scene
             }
            
         }
-        public IObj2D FocusObj
+        public ISimplus FocusSimplus
         {
             get
             {
-                if (_focusObj == null)
-                    return _point;
-                return _focusObj;
+                return _focusSimplus;
             }
             set
             {
-                _focusObj = value;
+                _focusSimplus = value;
             }
         }
 
         public void Update()
         {
-            _point.Pos = GetMousePos();
+            _pos = GetMousePos();
             _state.Set(Input.GetMouseButton(0));
         }
 
