@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Network">
+  <logicalClassDesignerModelMoniker Id="36d23dc7-bbf1-4b83-bcb8-deebb389a009" />
+  <nestedChildShapes>
+    <classShape Id="87e412fb-654c-4737-a520-bc29333f46ee" absoluteBounds="1.625, 0.75, 1.5, 3.4300230499108624" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="c2603dc0-7cda-4e8e-b731-18b6d4480c71" LastKnownName="NetworkClientMachine" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="c2d05c42-da02-48c0-8f0c-fa4c9e98d9ba" absoluteBounds="1.6400000000000001, 1.2653356393178306, 1.4700000000000002, 1.3222655827800431" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="db69c4ce-5bd9-4608-ad3f-185d17af2072" absoluteBounds="1.6400000000000001, 2.5976012220978735, 1.4700000000000002, 1.4824218278129895" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a910a5d-f159-4b25-acb1-8bf6fc1734a8" absoluteBounds="3.375, 0.75, 1.5, 3.10971055984497" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="2e0132cf-65e6-4a9f-a81f-071f041ca58e" LastKnownName="NetworkServerMachine" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="b764b1cf-eb5e-4da7-9642-f96e5d860f76" absoluteBounds="3.3899999999999997, 1.2653356393178306, 1.4700000000000002, 1.162109337747097" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="9f85185a-e486-40b4-88d4-b2d85ce72c0f" absoluteBounds="3.3899999999999997, 2.4374449770649278, 1.4700000000000002, 1.3222655827800429" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

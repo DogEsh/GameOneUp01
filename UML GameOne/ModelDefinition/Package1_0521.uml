@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8ed35424-e992-47f6-89fb-83afb24a1c15"
+  name="GameOne"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="716a9ec1-c1ad-4673-b102-94eb5f12c381"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8a6112a2-ad59-42cd-a131-e48680d75c7b"
+        LastKnownName="BinarySerialization"
+        LastKnownLocation="Package2_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bcc4f4f8-2713-47d5-b2f3-78cae19a6352"
+        LastKnownName="Command"
+        LastKnownLocation="Package10_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8faace42-ee14-4205-8c67-261357b789bf"
+        LastKnownName="Scene"
+        LastKnownLocation="Package12_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0a1dff11-9136-4fa7-a92c-99e234bca9d0"
+        LastKnownName="Message"
+        LastKnownLocation="Package13_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e45d4ecd-f6fe-496b-b1bc-b425a9a2db7a"
+        LastKnownName="Data"
+        LastKnownLocation="Package17_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="991dc3cf-68b1-4334-8896-8b77adae302b"
+        LastKnownName="GameInfo"
+        LastKnownLocation="Package19_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7432e0ce-875f-4d9f-aea9-89e3fde99b99"
+        LastKnownName="Main"
+        LastKnownLocation="Package21_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5e4abbf0-9506-4812-9f56-081d3ea1780a"
+        LastKnownName="SystemBase"
+        LastKnownLocation="Package22_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e62598ae-7c30-475f-9100-7471e0cadd34"
+        LastKnownName="Network"
+        LastKnownLocation="Package23_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="17cdbace-5ce3-4e97-8926-cca41f85df39"
+        LastKnownName="Properties"
+        LastKnownLocation="Package27_0521.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9294419d-3a3d-42e2-bd9d-eeea8a6285d8" name="UMLClassDiagramSolution" linkedPackageId="354fc59c-dd28-46d1-ad04-71cd9fb2e2dc" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="7b4aa0c0-a2d9-46dc-961b-3bd283f3c7c2" name="Command" visibility="Private">
+        <referencesInternal>
+          <reference Id="ca6cca40-e41c-49be-b263-7e2c79aa3c0e" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne.Command" tag="ViewCode">
+            <elementDefinition Id="6ff9ca47-b742-4d7d-9caa-71430f9175b1" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="bcc4f4f8-2713-47d5-b2f3-78cae19a6352" />
+        <suppliersInternal>
+          <dependency Id="7624b475-615c-45c4-a924-fbe1bab41ad0">
+            <packageMoniker Id="711a26a1-6b2f-4698-a81d-761c2c70666e" LastKnownName="Command" />
+            <elementDefinition Id="9f49e6b9-1074-469c-a64a-a0683acfa3be" />
+          </dependency>
+          <dependency Id="a1ef957c-4a08-4e56-bdab-2479b27c5fa5">
+            <packageMoniker Id="0686031f-a960-49a6-8884-6006c522bd4b" LastKnownName="Message" />
+            <elementDefinition Id="e4fe446d-4ea3-4d61-969a-6a612bd4e8a5" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="e44a5c71-52cb-41c5-956c-6a9956aa4a57" name="Data" visibility="Private">
+        <referencesInternal>
+          <reference Id="887058f8-d8d8-41e2-b9ca-98edec62fb38" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne.Data" tag="ViewCode">
+            <elementDefinition Id="2424c2d0-3e59-4349-8c93-d1c1bd0eb95c" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="e45d4ecd-f6fe-496b-b1bc-b425a9a2db7a" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="4d587e8d-b808-4da0-a5c3-55f378b335d2" name="GameInfo" visibility="Private">
+        <referencesInternal>
+          <reference Id="0bfc63ce-bc3d-4ccf-8a17-2142094d8e22" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne.GameInfo" tag="ViewCode">
+            <elementDefinition Id="109aeab0-ad4f-4172-990c-0e09aeb823fa" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="991dc3cf-68b1-4334-8896-8b77adae302b" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="f144b320-9737-43a1-a113-12b2282257b5" name="Main" visibility="Private">
+        <referencesInternal>
+          <reference Id="844bdf79-8594-45cd-807c-43e8311c9734" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne.Main" tag="ViewCode">
+            <elementDefinition Id="32323491-f83e-4eb9-a271-1fa441248312" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="7432e0ce-875f-4d9f-aea9-89e3fde99b99" />
+        <suppliersInternal>
+          <dependency Id="3706f6fa-d8bd-4a2d-ac64-e6a5978d813e">
+            <packageMoniker Id="b380f721-351e-4db0-a460-f4275b9983a3" LastKnownName="Scenario" />
+            <elementDefinition Id="3e28397c-b9d7-4096-ac7d-64d2226a1544" />
+          </dependency>
+          <dependency Id="25c36572-d23c-432f-9430-9bb5b79b2ca2">
+            <packageMoniker Id="23840786-4d04-494c-bf0e-097cd0978f6a" LastKnownName="Network" />
+            <elementDefinition Id="dc59e5ac-f887-45f9-aea7-8acd717129b1" />
+          </dependency>
+          <dependency Id="34dd978b-7666-4df0-b970-2ac6920f3560">
+            <packageMoniker Id="3f9da67b-a0c6-41cc-9045-a4092f9a1aee" LastKnownName="Scene" />
+            <elementDefinition Id="7a3eacdf-4cc4-4fc0-af51-f5770e9ea0bc" />
+          </dependency>
+          <dependency Id="b7f7b543-d69c-4ae4-9c02-18a83b1ba5eb">
+            <packageMoniker Id="440e3b9c-1764-4c6c-8042-bf2c382d9845" LastKnownName="Manager" />
+            <elementDefinition Id="b374be48-ad9e-4f95-a116-5666f5688006" />
+          </dependency>
+          <dependency Id="dd600ad9-b0de-4e3b-81da-1d5e1e38f5a6">
+            <packageMoniker Id="165dc035-3b9c-43f9-b52a-19fb41595007" LastKnownName="Main" />
+            <elementDefinition Id="f691727a-d12c-411a-beb2-2530c3014263" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="0686031f-a960-49a6-8884-6006c522bd4b" name="Message" visibility="Private">
+        <referencesInternal>
+          <reference Id="a0444c8c-e1b3-47bb-8649-1939fc8a3c4c" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne.Message" tag="ViewCode">
+            <elementDefinition Id="1f4db115-2377-4858-8184-6a048cd9073c" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="0a1dff11-9136-4fa7-a92c-99e234bca9d0" />
+        <suppliersInternal>
+          <dependency Id="049bfe1a-ea0c-48b5-9dbf-243526b88d72">
+            <packageMoniker Id="c9bc3849-2598-43da-b3ce-377c242cb7d7" LastKnownName="Message" />
+            <elementDefinition Id="3065be77-1046-4c2d-83a6-c4a5fcb4712c" />
+          </dependency>
+          <dependency Id="65466171-6b43-40f8-97bf-62f4e42b6fb6">
+            <packageMoniker Id="4d587e8d-b808-4da0-a5c3-55f378b335d2" LastKnownName="GameInfo" />
+            <elementDefinition Id="07ee583e-beb1-444c-959c-8a5515e434ef" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="440e3b9c-1764-4c6c-8042-bf2c382d9845" name="Manager" visibility="Private">
+        <referencesInternal>
+          <reference Id="6ccb76c4-f95b-45ed-aebe-ffaf54da12a5" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne.Message.Manager" tag="ViewCode">
+            <elementDefinition Id="c0c7d947-8a0f-438b-846e-db75d9818600" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="5f05a897-c9c0-45a3-b86c-4df6faa83ad0" />
+        <suppliersInternal>
+          <dependency Id="1faf8fd7-c3b1-4088-b8c9-aa5f89c9759b">
+            <packageMoniker Id="0686031f-a960-49a6-8884-6006c522bd4b" LastKnownName="Message" />
+            <elementDefinition Id="0bb29549-fe92-4113-b3db-251735c09836" />
+          </dependency>
+          <dependency Id="818528ba-cc4c-4aee-80de-2a60d665fbab">
+            <packageMoniker Id="7b4aa0c0-a2d9-46dc-961b-3bd283f3c7c2" LastKnownName="Command" />
+            <elementDefinition Id="577f97ef-0d95-41d7-b227-fdec3f597038" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="23840786-4d04-494c-bf0e-097cd0978f6a" name="Network" visibility="Private">
+        <referencesInternal>
+          <reference Id="9124e4e4-94cd-4282-86f5-c560a257a9bd" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne.Network" tag="ViewCode">
+            <elementDefinition Id="fe52b7c6-5396-4404-886e-41ba5a16e0fc" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="e62598ae-7c30-475f-9100-7471e0cadd34" />
+        <suppliersInternal>
+          <dependency Id="600ea640-a701-4623-b8ec-0e64eb88ec0e">
+            <packageMoniker Id="7ef34b61-874c-4290-b8d3-1b6d671c8d14" LastKnownName="Network" />
+            <elementDefinition Id="ba1e8adb-9b2e-478e-b45d-bbc8990bb54e" />
+          </dependency>
+          <dependency Id="053d288f-5f34-48b4-8538-9eb73d5fded0">
+            <packageMoniker Id="440e3b9c-1764-4c6c-8042-bf2c382d9845" LastKnownName="Manager" />
+            <elementDefinition Id="008bd5e6-e1d4-4083-9f57-6a6c53097993" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="3f9da67b-a0c6-41cc-9045-a4092f9a1aee" name="Scene" visibility="Private">
+        <referencesInternal>
+          <reference Id="5b6ac522-6c1b-4128-9151-b9e12b004ec7" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.GameOne.Scene" tag="ViewCode">
+            <elementDefinition Id="64d5d458-5efe-4e7c-a925-9aa4086fb02a" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="8faace42-ee14-4205-8c67-261357b789bf" />
+        <suppliersInternal>
+          <dependency Id="19618fad-1429-417f-9286-a4bb436ab9a5">
+            <packageMoniker Id="e44a5c71-52cb-41c5-956c-6a9956aa4a57" LastKnownName="Data" />
+            <elementDefinition Id="3da9dce3-7c8f-4a80-b946-28823d508a57" />
+          </dependency>
+          <dependency Id="4d7d6158-c0b3-49e9-9aac-244f6daf3a08">
+            <packageMoniker Id="d5a5ed7a-6e74-44fb-91af-a3aced6e73cb" LastKnownName="User" />
+            <elementDefinition Id="a8d7e025-3cdf-49f9-84f7-8f2f818287cb" />
+          </dependency>
+          <dependency Id="85f422b4-1c05-459b-858e-e5745aa55c6e">
+            <packageMoniker Id="7b4aa0c0-a2d9-46dc-961b-3bd283f3c7c2" LastKnownName="Command" />
+            <elementDefinition Id="74fa1ce5-57d2-4fc1-a21e-405d2de0157a" />
+          </dependency>
+          <dependency Id="1f811577-beb6-483c-a2b7-c239999c40e9">
+            <packageMoniker Id="0686031f-a960-49a6-8884-6006c522bd4b" LastKnownName="Message" />
+            <elementDefinition Id="0cbae1c5-9601-4b29-9dbf-2820f4055a4c" />
+          </dependency>
+          <dependency Id="3ff8580f-ffd9-4c38-87ca-cd77ad15b761">
+            <packageMoniker Id="4d587e8d-b808-4da0-a5c3-55f378b335d2" LastKnownName="GameInfo" />
+            <elementDefinition Id="d25d2a4e-ae37-4a6c-ba6d-58125905e83e" />
+          </dependency>
+          <dependency Id="cfcb90af-c35e-4c8c-a45f-329ad33b7d54">
+            <packageMoniker Id="b380f721-351e-4db0-a460-f4275b9983a3" LastKnownName="Scenario" />
+            <elementDefinition Id="39191031-8c49-4686-a094-22030b92fcf6" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="165dc035-3b9c-43f9-b52a-19fb41595007" name="Main" visibility="Private">
+        <referencesInternal>
+          <reference Id="7776068c-955e-46fc-b5b7-75fefb28d2bc" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.Main" tag="ViewCode">
+            <elementDefinition Id="5eebec2a-2c1e-4dec-86a4-778aa64096a4" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="ba7583d1-c219-4f44-bd09-adc17c7698e7" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="c9bc3849-2598-43da-b3ce-377c242cb7d7" name="Message" visibility="Private">
+        <referencesInternal>
+          <reference Id="a96b2b36-0de0-49be-a6d2-738efe0e3431" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.Message" tag="ViewCode">
+            <elementDefinition Id="341207b8-b860-48aa-a8e7-340a9f3f0670" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="fc9cfac2-e2f2-4a71-829c-64ec8ed55f1e" />
+        <suppliersInternal>
+          <dependency Id="3edcbc1a-033b-4672-89be-e9a3266bf9e3">
+            <packageMoniker Id="d5a5ed7a-6e74-44fb-91af-a3aced6e73cb" LastKnownName="User" />
+            <elementDefinition Id="cd96031d-65e6-4aa7-9789-21fc19932217" />
+          </dependency>
+        </suppliersInternal>
+        <profileInstances>
+          <packageHasProfileInstances Id="cc086752-cee0-46da-99e1-030ef1a97d7c">
+            <profileInstance Id="1c8b57de-a9c2-4257-98fd-2901404d867f" name="CSharpProfile">
+              <elementDefinition Id="d0421c33-44d5-4316-902e-d91f92f26647" />
+            </profileInstance>
+            <elementDefinition Id="695f5be3-da5f-4cec-852f-8566fd6ebdbf" />
+          </packageHasProfileInstances>
+        </profileInstances>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="7ef34b61-874c-4290-b8d3-1b6d671c8d14" name="Network" visibility="Private">
+        <referencesInternal>
+          <reference Id="c777b6de-3024-4ad0-b337-abac2c7478c1" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.Network" tag="ViewCode">
+            <elementDefinition Id="d9a6c31f-70a4-4f75-8312-e338183f8f88" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="1586e22b-373c-4c69-a9c0-3a6522561b31" />
+        <suppliersInternal>
+          <dependency Id="ba0a866f-c447-4cd0-ba8e-2752d85439f6">
+            <packageMoniker Id="d5a5ed7a-6e74-44fb-91af-a3aced6e73cb" LastKnownName="User" />
+            <elementDefinition Id="b99f7b3f-b541-4b8a-9568-d524dea77c0c" />
+          </dependency>
+          <dependency Id="b8498355-73a6-4aee-ba33-8449adfe964d">
+            <packageMoniker Id="bd3f38be-ae8d-4021-bef6-0b712f96e440" LastKnownName="BinarySerialization" />
+            <elementDefinition Id="7a3d7f00-000e-4008-8eec-80e174e920e3" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="d5a5ed7a-6e74-44fb-91af-a3aced6e73cb" name="User" visibility="Private">
+        <referencesInternal>
+          <reference Id="5facc5c7-dd5d-4088-a884-f4f2fc9abf4f" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.User" tag="ViewCode">
+            <elementDefinition Id="4d2edc63-cae3-414c-a7a0-78c85bae7a2d" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="f69fbfee-1b5d-4b80-8cb8-37eafe1843b8" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="711a26a1-6b2f-4698-a81d-761c2c70666e" name="Command" visibility="Private">
+        <referencesInternal>
+          <reference Id="cc1bea5a-6003-4934-9ceb-0ed6c7f36d14" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.Command" tag="ViewCode">
+            <elementDefinition Id="bd8e5f64-3ccf-4486-a52a-d7898ff81b48" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="714318bc-1deb-4bb0-b243-f5d9e65c3b01" />
+        <suppliersInternal>
+          <dependency Id="d29af135-b93c-49f5-a1aa-1ffe827b41c5">
+            <packageMoniker Id="165dc035-3b9c-43f9-b52a-19fb41595007" LastKnownName="Main" />
+            <elementDefinition Id="e3a02928-306a-4f18-81b8-d0b9fa2ee4da" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="b380f721-351e-4db0-a460-f4275b9983a3" name="Scenario" visibility="Private">
+        <referencesInternal>
+          <reference Id="53840f8f-9da1-425f-ade0-5cf92ad6add8" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.Command.Scenario" tag="ViewCode">
+            <elementDefinition Id="8b83659a-e987-47e7-8822-018340d12bf3" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="d5d35066-f816-4086-a440-32999f460c74" />
+        <suppliersInternal>
+          <dependency Id="83f62e97-a052-47da-9d1c-ad38c48f1e1c">
+            <packageMoniker Id="711a26a1-6b2f-4698-a81d-761c2c70666e" LastKnownName="Command" />
+            <elementDefinition Id="f69ca559-f140-4c91-8705-868ceed515b8" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="bd3f38be-ae8d-4021-bef6-0b712f96e440" name="BinarySerialization" visibility="Private">
+        <referencesInternal>
+          <reference Id="dd0a5833-c455-494b-a757-955bfbb86be1" handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.BinarySerialization" tag="ViewCode">
+            <elementDefinition Id="b13e64c9-4dc8-4625-b792-e77a2db3e580" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="fbf5f862-e811-4d87-be1e-2edffd9f0ae1" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="354fc59c-dd28-46d1-ad04-71cd9fb2e2dc" name="UML GameOne">
+    <elementDefinition Id="070e687e-d1ab-4446-a324-379590f75f78" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2106c3dc-914b-4ea1-8333-e64e46afa54d">
+        <profileInstance Id="d7fe5c66-2464-41c4-8af8-4ed8bcce48e6" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9bec894e-9087-4ab9-84a5-66f60d3c2f62">
+        <profileInstance Id="31f289cc-535f-4b17-9987-ea773bacc2c0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

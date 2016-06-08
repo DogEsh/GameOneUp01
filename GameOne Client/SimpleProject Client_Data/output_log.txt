@@ -1,0 +1,90 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics (ID=0xf31)
+    Vendor:   Intel
+    VRAM:     547 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\GameOne Lib.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\GameOne Lib.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\SimpleTeam Lib.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\SimpleTeam Lib.dll into Unity Child Domain
+- Completed reload, in  0.183 seconds
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1200 60Hz; virtual: 1920x1200 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.737077 ms
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics (ID=0xf31)
+    Vendor:   Intel
+    VRAM:     547 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\GameOne Lib.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\GameOne Lib.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\SimpleTeam Lib.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\SimpleTeam Lib.dll into Unity Child Domain
+- Completed reload, in  0.411 seconds
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1200 60Hz; virtual: 1920x1200 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.760117 ms
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics (ID=0xf31)
+    Vendor:   Intel
+    VRAM:     547 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\GameOne Lib.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\GameOne Lib.dll into Unity Child Domain
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\SimpleTeam Lib.dll (this message is harmless)
+Loading C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\SimpleTeam Lib.dll into Unity Child Domain
+- Completed reload, in  0.174 seconds
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\vladlen\Documents\Visual Studio 2015\Projects\C Sharp\GameOne\GameOne Client\SimpleProject Client_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1200 60Hz; virtual: 1920x1200 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.748946 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: d0 -> priority: 1 
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 21a4 -> priority: 1 
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 954 -> priority: 1 

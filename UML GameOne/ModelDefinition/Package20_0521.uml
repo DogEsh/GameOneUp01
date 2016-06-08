@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f0c5a1d0-8e26-4c9d-98fc-aba934f6f9e2"
+  name="UnityEngine"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ae676e60-24c5-4abe-9a6a-87e9386080ab"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DUnityEngine"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="a3752bc9-4113-4282-9bfd-2c875c87530a">
+      <profileInstance
+        Id="67a6699f-40e2-466f-8ed5-83ad5ff5b6e9"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="d6bf8a54-26cf-4903-9c65-6e2026b9b0c5"
+        name="Vector2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="055e5ebc-0b64-47b7-8b5c-b04f19e5d46f"
+            handle="viewcode://./CodeSchema_Struct?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FLibrary%2FUnityAssemblies%2FUnityEngine.dll&quot; Namespace%3DUnityEngine Type%3DVector2"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b2e32d39-5235-40c9-8609-0b18860f7cf0"
+            name="struct"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ef54167e-1cb8-4c84-a90a-a74ab56ee389">
+                <propertyInstance
+                  Id="194a1e3b-73e3-4bb0-8236-19c43d819ace"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b832b888-0be3-4d45-b839-49aa5ea60cf4">
+                <propertyInstance
+                  Id="f7c97933-f701-4fec-bbec-0f43368dec3a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a49f5246-2469-4503-af83-748a527df532">
+                <propertyInstance
+                  Id="3c60c6a9-f293-455f-9fcb-b2bec70ccdad"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ef52864d-6f17-44c8-b3d7-fc6346ab6885">
+                <propertyInstance
+                  Id="287f1282-0588-455c-b4bf-80da1619cddc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="98907d04-606f-416a-abb5-d158377d02e7"
+        name="MonoBehaviour"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="dc93e856-dc18-4c9c-b89c-91b9a34eefd6"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FLibrary%2FUnityAssemblies%2FUnityEngine.dll&quot; Namespace%3DUnityEngine Type%3DMonoBehaviour"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="75f12b00-7e6a-4ea1-9e99-444d2c16c63a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e2ad586a-3a47-444e-9598-912d1857edfe">
+                <propertyInstance
+                  Id="777eac9b-fdde-48f2-864b-4f28f8040c69"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ffbe2a0-622e-4660-a70c-8f00cf66bd13">
+                <propertyInstance
+                  Id="6929fed4-4557-48f5-a8d4-5e7250a584e0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="040900c7-17f4-4f5d-906f-54e571df1b88">
+                <propertyInstance
+                  Id="354ac1d0-0e5e-4ec6-9d28-61bd3222bb2f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6b6d9237-b386-4364-96cb-f78e52824dbe">
+                <propertyInstance
+                  Id="31d39eef-6c37-4f92-a4c6-25e87965fd8c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4b8feacd-e748-4e35-95d6-4a22e176f996">
+                <propertyInstance
+                  Id="11234f84-0f1a-46f3-a466-742929e758c1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ba8035eb-0d35-435c-a0d5-56b91bad88a5"
+        LastKnownName="UI"
+        LastKnownLocation="Package29_0521.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="10ca85de-595a-4044-be0e-7f802df64aba"
+        name="GameObject"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c2399a64-fd42-438d-97b5-07bea22e9f29"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FLibrary%2FUnityAssemblies%2FUnityEngine.dll&quot; Namespace%3DUnityEngine Type%3DGameObject"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fe068d36-9080-4eb4-ac33-5440691183e1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="caa6449d-60ec-46e3-b42f-dc85b526ade7">
+                <propertyInstance
+                  Id="b3cb8b9e-8b64-49db-aa0f-7528a9cc3e05"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d86c02f0-41c8-4e74-86d2-2295fd01996b">
+                <propertyInstance
+                  Id="a37e9a49-1fd1-4010-9f66-36a45b4f2940"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e1b9fdaf-3a43-4379-bc04-a877ee67333c">
+                <propertyInstance
+                  Id="0cb1d27b-23ba-439c-9c5e-503c024ba5e6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9cdc3923-4d3e-4a88-be43-ae0d18d7f8f2">
+                <propertyInstance
+                  Id="aa21f750-8d96-4ddd-b09d-13904f44f8f8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a44bccf8-5629-487d-8827-3681c7e73fba">
+                <propertyInstance
+                  Id="984ee024-b396-4907-81c4-ec736d87b1a4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7522cbac-b191-432f-b90d-f6f9f52a7f2b"
+        name="SpriteRenderer"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ba35c214-e627-481a-bf35-c8c8c12aa516"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FLibrary%2FUnityAssemblies%2FUnityEngine.dll&quot; Namespace%3DUnityEngine Type%3DSpriteRenderer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b23c3a75-52e7-477a-b5a7-36100e56d53a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="03b789a2-5ea7-49e3-aa30-a7c1be90744b">
+                <propertyInstance
+                  Id="84beb4d2-338d-45e2-afff-efdc74080271"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="17153cef-bfb7-4824-bd4e-4f475802fc3b">
+                <propertyInstance
+                  Id="230422a3-d26e-4a4d-b4ad-56db30b82626"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ee46d4a5-edf8-47f0-bd8b-90116dae7e19">
+                <propertyInstance
+                  Id="52b5ce23-d201-4cac-b9db-343c4d69bb53"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c430cd74-5eda-47e1-839a-2cc9c08304a8">
+                <propertyInstance
+                  Id="fc724eb8-fe98-4cab-bfe7-afd9f98e5d76"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="438830af-ce0f-4f01-ab5c-6446ef80ae24">
+                <propertyInstance
+                  Id="b77d7ad4-bdfe-4cb7-8277-4457a10441bd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e15706e5-e9dd-4e38-af05-04ec015466b7"
+        name="Sprite"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2aea11a7-3a73-47cd-84e4-07c99d62cf6d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FLibrary%2FUnityAssemblies%2FUnityEngine.dll&quot; Namespace%3DUnityEngine Type%3DSprite"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="75fe096f-5e43-4793-ad06-f7c37a34d2d0"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ddbc93e1-f947-4477-9b3c-74c8d862452a">
+                <propertyInstance
+                  Id="ff956b61-11d2-4855-b78e-8aae48de1551"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="395da2a8-4688-4083-977d-c1b02fa047cb">
+                <propertyInstance
+                  Id="42cfda6f-aff3-42e8-b3dc-3bf8d5b8255c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c7a918ae-dc34-4a07-abac-2097447a0df8">
+                <propertyInstance
+                  Id="e84d43fb-4098-4239-9d20-b73fdc3d75f2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9e3093fe-2d8c-4590-856b-8a4b18e110d2">
+                <propertyInstance
+                  Id="d8b8955e-685f-466d-b6af-27f4c881da6e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f0318bda-0e74-4cf2-abea-a669b11a9ebb">
+                <propertyInstance
+                  Id="35ee1b76-48ef-4070-861a-4c62f6972747"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ee7091d7-bf13-47b6-a238-1f8d62604e4c"
+        name="Animator"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="09ad9078-3fe1-4708-aa77-249adf45cc93"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FLibrary%2FUnityAssemblies%2FUnityEngine.dll&quot; Namespace%3DUnityEngine Type%3DAnimator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="86820174-61e1-4e6c-9065-bec6a3139bd3"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3bea202b-20d1-49b4-8fd6-1d31caf2a687">
+                <propertyInstance
+                  Id="3b318db4-f9d5-44eb-9c9f-2e5f4f0b61af"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="52faa0cc-461f-4761-b58a-49567c7e71fd">
+                <propertyInstance
+                  Id="d5025c68-9860-488e-9fd6-ac18a5fcff17"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e1f48867-bc0c-4ff0-baf0-085151e07e88">
+                <propertyInstance
+                  Id="c8a2f437-7eed-4118-ad2c-6e1853eded97"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7224cbd7-2ac9-40b5-a457-9bd0079ef069">
+                <propertyInstance
+                  Id="f1f04ed7-dbbb-4f4d-8c04-9f648a4e8f70"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="54cc33a0-1949-4328-b09b-ed7fd424e3d3">
+                <propertyInstance
+                  Id="80abc8b6-b4ef-4f34-ab6c-fa42c04b7e92"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

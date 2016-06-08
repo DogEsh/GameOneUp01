@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4E07D41-66B4-45D4-85B1-02C34181967B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleTeam.GameOne</RootNamespace>
+    <AssemblyName>GameOne Lib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SimpleTeam Lib">
+      <HintPath>..\SimpleTeam Lib\bin\Debug\SimpleTeam Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GameOne Client\Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\CommandSendMessageScene.cs" />
+    <Compile Include="Parameter\MessageManager\IParametersMessagesManager.cs" />
+    <Compile Include="Parameter\MessageManager\ParametersMessagesManager.cs" />
+    <Compile Include="Parameter\Main\ParameterMain.cs" />
+    <Compile Include="Parameter\Scene\Game\IParametersSceneGame.cs" />
+    <Compile Include="Parameter\Scene\Game\ParametersSceneGame.cs" />
+    <Compile Include="Parameter\Scene\Menu\IParametersSceneMenu.cs" />
+    <Compile Include="Parameter\AllGameOneParameters.cs" />
+    <Compile Include="BinarySerialization\Packer\Packer.cs" />
+    <Compile Include="BinarySerialization\Unpacker\Unpacker.cs" />
+    <Compile Include="Parameter\Scene\Menu\ParametersSceneMenu.cs" />
+    <Compile Include="Parameter\HelperParameterID.cs" />
+    <Compile Include="GameInfo\GameContainer\GameObjList.cs" />
+    <Compile Include="GameInfo\IGameID.cs" />
+    <Compile Include="GameInfo\GameContainer\IGameObjContainer.cs" />
+    <Compile Include="GameInfo\Link\Container\ILinkInfoContainer.cs" />
+    <Compile Include="GameInfo\Link\Container\LinkInfoList.cs" />
+    <Compile Include="GameInfo\Link\Info\ISimplusLinkInfo.cs" />
+    <Compile Include="GameInfo\Link\Info\SimplusLinkInfo.cs" />
+    <Compile Include="GameInfo\Map\IMapInfo.cs" />
+    <Compile Include="GameInfo\Map\MapInfo.cs" />
+    <Compile Include="GameInfo\Link\State\SimplusLinkActionState.cs" />
+    <Compile Include="GameInfo\Simplus\HP\ISimplusHP.cs" />
+    <Compile Include="GameInfo\Simplus\HP\ISimplusHPBase.cs" />
+    <Compile Include="GameInfo\Simplus\HP\ISimplusHPClient.cs" />
+    <Compile Include="GameInfo\Simplus\HP\ISimplusHPServer.cs" />
+    <Compile Include="GameInfo\Simplus\HP\SimplusHP.cs" />
+    <Compile Include="GameInfo\Simplus\Info\ISimplusInfo.cs" />
+    <Compile Include="GameInfo\Simplus\Info\ISimplusInfoBase.cs" />
+    <Compile Include="GameInfo\Simplus\Info\ISimplusInfoClient.cs" />
+    <Compile Include="GameInfo\Simplus\Info\ISimplusInfoServer.cs" />
+    <Compile Include="GameInfo\Simplus\Info\SimplusInfo.cs" />
+    <Compile Include="GameInfo\Obj2D\Circle.cs" />
+    <Compile Include="GameInfo\Obj2D\IObj2D.cs" />
+    <Compile Include="GameInfo\Obj2D\Point.cs" />
+    <Compile Include="GameInfo\Party\IParty.cs" />
+    <Compile Include="GameInfo\Party\Party.cs" />
+    <Compile Include="Message\Game\MessageDataGameMap.cs" />
+    <Compile Include="Message\Game\MessageDataGamerCommand.cs" />
+    <Compile Include="Message\Game\MessageDataGameState.cs" />
+    <Compile Include="Message\MessagesManager\IMessagesManager.cs" />
+    <Compile Include="Message\MessagesManager\IMessagesManagerNetwork.cs" />
+    <Compile Include="Message\MessagesManager\IMessagesManagerScenario.cs" />
+    <Compile Include="Message\MessagesManager\MessagesManager.cs" />
+    <Compile Include="Parameter\Scene\IParameterSceneMessages.cs" />
+    <Compile Include="Scene\Messages\IMessageHandler.cs" />
+    <Compile Include="Scene\ISceneGame.cs" />
+    <Compile Include="Scene\Messages\ISceneMessages.cs" />
+    <Compile Include="Scene\ISceneMenu.cs" />
+    <Compile Include="Command\CommandSendMessageNetwork.cs" />
+    <Compile Include="Scene\Messages\MessageHandlerScenario.cs" />
+    <Compile Include="Scene\Messages\SceneMessages.cs" />
+    <Compile Include="Scene\Scenario\ISceneScenario.cs" />
+    <Compile Include="Scene\Scenario\SceneScenario.cs" />
+    <Compile Include="Message\Menu\MessageDataChat.cs" />
+    <Compile Include="Message\HelperMessageID.cs" />
+    <Compile Include="Message\Menu\MessageDataProfile.cs" />
+    <Compile Include="BinarySerialization\Packer\PackerChat.cs" />
+    <Compile Include="BinarySerialization\Packer\PackerProfile.cs" />
+    <Compile Include="BinarySerialization\Unpacker\IUnpackerMessage.cs" />
+    <Compile Include="BinarySerialization\Packer\IPackerMessage.cs" />
+    <Compile Include="Message\Menu\MessageDataAccount.cs" />
+    <Compile Include="BinarySerialization\Packer\RegisterPacker.cs" />
+    <Compile Include="BinarySerialization\Packer\PackerAccount.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BinarySerialization\Unpacker\UnpuckerProfile.cs" />
+    <Compile Include="BinarySerialization\Unpacker\RegisterUnpacker.cs" />
+    <Compile Include="BinarySerialization\Unpacker\UnpackerChat.cs" />
+    <Compile Include="BinarySerialization\Unpacker\UnpackerAccount.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

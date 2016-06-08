@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ba7583d1-c219-4f44-bd09-adc17c7698e7"
+  name="Main"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="5eebec2a-2c1e-4dec-86a4-778aa64096a4"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleTeam.Main"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="5c0e4ea7-631c-420e-8229-01e2b8c9217b"
+        name="IMain"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="9c9c3130-4ab9-4498-bd4f-b63a718ca002"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Main Type%3DIMain"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4b35d261-ad79-4f60-a6b8-2d58c681c450"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9f02e637-213f-48d9-b340-901a32d11a78">
+                <propertyInstance
+                  Id="ff0fe432-b96c-4d30-923f-c1bf13dd22db"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7abefcaf-8c47-4696-98c0-c63751ecbfcc">
+                <propertyInstance
+                  Id="47904a81-5634-4743-ad92-7a0323320abb"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="10bddaaa-3edb-491c-adf6-0cc6d46cba23">
+                <propertyInstance
+                  Id="fc6b5ef0-2c65-448b-91e6-960c154b42f2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8709c2a7-2a0e-43b4-ad25-900eddafc15d">
+                <propertyInstance
+                  Id="de5e5dfd-74a9-494c-92fb-dd6792e5cff2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="9ff13deb-b641-4362-afb2-3b45cbc1bd9b"
+            name="Exit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f862d1e2-36c3-4dad-b4fa-c2bb2e217bbf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Main Type%3DIMain Member%3DExit"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d12af675-7c59-48a5-be6e-6a7f38b56493"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7c5a396-4594-4a85-83c7-839450507532">
+                    <propertyInstance
+                      Id="ec2366e4-022a-4c2b-b6d4-edc49a077e06"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9cc3552e-11f2-4ff1-8481-72e60fcb5af6">
+                    <propertyInstance
+                      Id="6edbcc82-8d8c-41c7-95f4-6ef5c44ed662"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9211b7d-d9a7-4067-bc9f-e55f65a3e854">
+                    <propertyInstance
+                      Id="6884a79c-de06-4ae1-bb3f-b95612565a7f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d5da3bd-939d-450b-9223-c1526035e011">
+                    <propertyInstance
+                      Id="672bf4de-e812-478a-b6f2-3a8719bcc32f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="969e5968-9069-4861-a839-d1d6da3e5a09">
+                    <propertyInstance
+                      Id="8deb67c4-798e-41a7-a41a-69f7e707f975"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7a55584-51d5-4f6e-a509-e83ccd5922bd">
+                    <propertyInstance
+                      Id="0b0813c8-14be-47f9-8444-abaa68c268ef"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
