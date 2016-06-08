@@ -8,7 +8,6 @@ namespace SimpleTeam.GameOne.Scene
     using MessageID = Byte;
     class MessageHandlerClientGameMap : IMessageHandler
     {
-        GameMap _map;
         public MessageID Type
         {
             get
