@@ -20,9 +20,16 @@ namespace SimpleTeam.GameOne.GameInfo
             _radius = radius;
         }
 
-        public Vector2 GetPos()
+        public Vector2 Pos
         {
-            return _pos;
+            get
+            {
+                return _pos;
+            }
+            set
+            {
+                _pos = value;
+            }
         }
 
         public Vector2 GetPosSurface(Vector2 destination)

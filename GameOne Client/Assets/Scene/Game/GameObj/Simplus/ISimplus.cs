@@ -10,7 +10,7 @@ namespace SimpleTeam.GameOne.Scene
     interface ISimplus : IGameObj
     {
         void UpdateInfo(ISimplusInfo info);
-        //void UpdateInfo(ISimplusInfo info);
+        IObj2D Obj2D { get; }
         bool IsFocused(Vector2 focusPos);
     }
 }

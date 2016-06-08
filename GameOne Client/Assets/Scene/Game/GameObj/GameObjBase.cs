@@ -20,6 +20,8 @@ namespace SimpleTeam.GameOne.Scene
         }
         public abstract ushort ID { get; }
 
+
+
         public abstract void Destroy();
 
         protected bool CheckDestroy()

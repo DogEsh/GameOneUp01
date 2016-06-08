@@ -76,7 +76,9 @@
     <Compile Include="Assets\Scene\Containers\Case.cs" />
     <Compile Include="Assets\Scene\Containers\IMessageContainer.cs" />
     <Compile Include="Assets\Scene\Containers\MessageContainer.cs" />
-    <Compile Include="Assets\Scene\Game\GameManager.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Cursor\Cursor.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Cursor\ICursor.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\GameManager.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\GameObjBase.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\IGameObj.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Map\GameMap.cs" />
@@ -87,6 +89,10 @@
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\Simplus.cs" />
     <Compile Include="Assets\Scene\Game\Handler\MessageHandlerClientGameMap.cs" />
     <Compile Include="Assets\Scene\Game\Handler\MessageHandlerClientGameState.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Mouse\IMouseButtonState.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Mouse\IMouseManager.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Mouse\MouseButtonState.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Mouse\MouseManager.cs" />
     <Compile Include="Assets\Scene\Game\Old\Game\Link\SimplusLinkOld.cs" />
     <Compile Include="Assets\Scene\Game\Old\Game\Link\SimplusLinkWrapperOld.cs" />
     <Compile Include="Assets\Scene\Game\Old\Game\Map\GameMapOld.cs" />
@@ -114,8 +120,6 @@
     <Compile Include="Assets\Scene\Menu\Window\GUI\IGUISign.cs" />
     <Compile Include="Assets\Scene\Menu\Window\WindowMenu.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Scene\Game\Manager\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

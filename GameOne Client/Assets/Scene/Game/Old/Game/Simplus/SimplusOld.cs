@@ -42,7 +42,7 @@ namespace SimpleTeam.GameOne.Scene
 
         public void InitInfo(SimplusInfo info)
         {
-            gameObject.transform.position = info.Obj2D.GetPos();
+            gameObject.transform.position = info.Obj2D.Pos;
 
             SetInfo(info);
         }

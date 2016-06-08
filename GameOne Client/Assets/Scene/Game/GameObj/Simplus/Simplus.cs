@@ -29,6 +29,14 @@ namespace SimpleTeam.GameOne.Scene
                 return _info.ID;
             }
         }
+        public IObj2D Obj2D
+        {
+            get
+            {
+                return _info.Obj2D;
+            }
+        }
+
 
         private void Start()
         {

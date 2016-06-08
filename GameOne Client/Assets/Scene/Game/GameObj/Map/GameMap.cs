@@ -29,6 +29,7 @@ namespace SimpleTeam.GameOne.Scene
         private void Start()
         {
             _simplusPrefab = Resources.Load<GameObject>(_pathSimplus);
+            InitSimplus();
         }
 
 
@@ -89,6 +90,7 @@ namespace SimpleTeam.GameOne.Scene
         private void InitSimplus()
         {
             _simpluses = new Dictionary<GameObjID, ISimplus>();
+            if (_info == null) return;
             foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
                 GameObject _inst = Instantiate(_simplusPrefab);

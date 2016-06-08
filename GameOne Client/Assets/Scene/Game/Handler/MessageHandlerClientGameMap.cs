@@ -6,8 +6,11 @@ using SimpleTeam.Message;
 namespace SimpleTeam.GameOne.Scene
 {
     using MessageID = Byte;
+
     class MessageHandlerClientGameMap : IMessageHandler
     {
+        IGameMap _map;
+
         public MessageID Type
         {
             get
@@ -15,8 +18,9 @@ namespace SimpleTeam.GameOne.Scene
                 return (MessageID)HelperMessageID.GameMap;
             }
         }
-        public MessageHandlerClientGameMap()
+        public MessageHandlerClientGameMap(IGameMap map)
         {
+            _map = map;
         }
 
         public void SetMessage(IMessage message)

@@ -24,8 +24,8 @@ namespace SimpleTeam.GameOne.Scene
             SimplusWrapperOld ss = source._wrapper;
             SimplusWrapperOld dd = destination._wrapper;
 
-            Vector2 s = ss.GetPosSurface(dd.GetPos());
-            Vector2 d = dd.GetPosSurface(ss.GetPos());
+            Vector2 s = ss.GetPosSurface(dd.Pos);
+            Vector2 d = dd.GetPosSurface(ss.Pos);
             //_wrap = new SimplusLinkWrapper(s, d);
             _wrap.SetAnimationState(SimplusLinkActionState.Flying);
             _wrap.SetSimplusLinkWrapperData(s, d);

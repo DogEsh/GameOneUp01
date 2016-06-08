@@ -24,7 +24,7 @@ namespace SimpleTeam.GameOne.Scene
             {
                 return new Vector2();
             }
-            return _source.GetPosSurface(_destination.GetPos());
+            return _source.GetPosSurface(_destination.Pos);
         }
 
         public Vector2 GetPosDestination()
@@ -33,7 +33,7 @@ namespace SimpleTeam.GameOne.Scene
             {
                 return new Vector2();
             }
-            return _destination.GetPosSurface(_source.GetPos());
+            return _destination.GetPosSurface(_source.Pos);
         }
     }
 }

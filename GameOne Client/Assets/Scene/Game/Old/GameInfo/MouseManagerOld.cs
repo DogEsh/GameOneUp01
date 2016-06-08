@@ -2,33 +2,27 @@
 
 namespace SimpleTeam.GameOne.Scene
 {
-    public enum MouseState
-    {
-        Nope,
-        Down,
-        Pressed,
-        Up
-    }
+    
 
     public class MouseButtonStateOld
     {
-        MouseState _state;
+        HelperMouseState _state;
         public void Set(bool isPressed)
         {
             if (isPressed)
             {
                 switch (_state)
                 {
-                    case MouseState.Pressed:
+                    case HelperMouseState.Pressed:
                         break;
-                    case MouseState.Down:
-                        _state = MouseState.Pressed;
+                    case HelperMouseState.Down:
+                        _state = HelperMouseState.Pressed;
                         break;
-                    case MouseState.Nope:
-                        _state = MouseState.Down;
+                    case HelperMouseState.Nope:
+                        _state = HelperMouseState.Down;
                         break;
-                    case MouseState.Up:
-                        _state = MouseState.Down;
+                    case HelperMouseState.Up:
+                        _state = HelperMouseState.Down;
                         break;
                 }
             }
@@ -36,27 +30,27 @@ namespace SimpleTeam.GameOne.Scene
             {
                 switch (_state)
                 {
-                    case MouseState.Nope:
+                    case HelperMouseState.Nope:
                         break;
-                    case MouseState.Up:
-                        _state = MouseState.Nope;
+                    case HelperMouseState.Up:
+                        _state = HelperMouseState.Nope;
                         break;
-                    case MouseState.Pressed:
-                        _state = MouseState.Up;
+                    case HelperMouseState.Pressed:
+                        _state = HelperMouseState.Up;
                         break;
-                    case MouseState.Down:
-                        _state = MouseState.Up;
+                    case HelperMouseState.Down:
+                        _state = HelperMouseState.Up;
                         break;
                 }
             }
         }
-        public MouseState Get()
+        public HelperMouseState Get()
         {
             return _state;
         }
     }
 
-    public class MouseManager
+    public class MouseManagerOld
     {
         //private GameObject _mouseObj;
         //public GameObject _simplusInteract;

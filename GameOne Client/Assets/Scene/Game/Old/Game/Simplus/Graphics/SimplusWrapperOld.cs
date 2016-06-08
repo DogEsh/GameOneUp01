@@ -14,6 +14,19 @@ namespace SimpleTeam.GameOne.Scene
         public GameObject MyInstance;
         private SimplusAnimationManagerOld _animManager;
 
+        public Vector2 Pos
+        {
+            get
+            {
+                return ((IObj2D)_circle).Pos;
+            }
+
+            set
+            {
+                ((IObj2D)_circle).Pos = value;
+            }
+        }
+
         public void Start()
         {
             GameObject circleObject = gameObject;
@@ -22,11 +35,6 @@ namespace SimpleTeam.GameOne.Scene
             float radius = (spr.texture.width / 2) / spr.pixelsPerUnit * 0.8f;
             _circle = new Circle(pos, radius);
             _animManager = new SimplusAnimationManagerOld(MyInstance.GetComponent<Animator>());
-        }
-
-        public Vector2 GetPos()
-        {
-            return ((IObj2D)_circle).GetPos();
         }
 
         public Vector2 GetPosSurface(Vector2 destination)

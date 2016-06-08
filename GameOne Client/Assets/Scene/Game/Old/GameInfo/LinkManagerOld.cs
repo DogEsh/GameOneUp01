@@ -28,7 +28,7 @@ namespace SimpleTeam.GameOne.Scene
             }
         }
 
-        public void UpdateDraw(SimplusOld simplus, MouseManager mouse)
+        public void UpdateDraw(SimplusOld simplus, MouseManagerOld mouse)
         {
             _logics.SetFocus(simplus);
             _logics.SetMouseState(mouse.State.Get());

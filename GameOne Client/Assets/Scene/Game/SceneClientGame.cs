@@ -26,15 +26,31 @@ namespace SimpleTeam.GameOne.Scene
 
         //GameManager
         GameManager _gameManager;
-        public void Start()
+        private void Start()
         {
-            _sceneMessages = new SceneClientGameMessages();
-            _gameManager = new GameManager();
+            IGameMap m = CreateMap();
+            CreateGameManager(m);
+            _sceneMessages = new SceneClientGameMessages(m);
+            
+        }
+        private IGameMap CreateMap()
+        {
+            const string path = "Game/GameMapPrefab";
+            GameObject prefab = Resources.Load<GameObject>(path);
+            GameObject inst = Instantiate(prefab);
+            return inst.GetComponent<GameMap>();
+        }
+        private void CreateGameManager(IGameMap map)
+        {
+            const string path = "Game/GameManagerPrefab";
+            GameObject prefab = Resources.Load<GameObject>(path);
+            GameObject inst = Instantiate(prefab);
+            _gameManager = inst.GetComponent<GameManager>();
+            _gameManager.SetMap(map);
         }
 
         private void Update()
         {
-            _gameManager.Update();
         }
     }
 }

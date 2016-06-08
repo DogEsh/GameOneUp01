@@ -12,7 +12,7 @@ namespace SimpleTeam.GameOne.Scene
     using GameID = UInt16;
     class GameManagerOld : MonoBehaviour
     {
-        private MouseManager _mouse = new MouseManager();
+        private MouseManagerOld _mouse = new MouseManagerOld();
         public LinkManagerOld _linkManager;
         public GameMapOld _map;
 

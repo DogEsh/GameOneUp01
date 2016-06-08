@@ -5,11 +5,8 @@ using System.Text;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    class GameManager
+    interface IMouseButtonState
     {
-        public void Update()
-        {
-
-        }
+        HelperMouseState Get();
     }
 }

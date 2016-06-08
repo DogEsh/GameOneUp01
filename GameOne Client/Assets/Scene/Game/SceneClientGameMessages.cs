@@ -4,9 +4,9 @@ namespace SimpleTeam.GameOne.Scene
 {
     class SceneClientGameMessages : SceneMessages
     {
-        public SceneClientGameMessages()
+        public SceneClientGameMessages(IGameMap map)
         {
-            base.Add(new MessageHandlerClientGameMap());
+            base.Add(new MessageHandlerClientGameMap(map));
             base.Add(new MessageHandlerClientGameState());
         }
     }

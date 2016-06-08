@@ -61,9 +61,9 @@ namespace SimpleTeam.GameOne.Scene
             //SetAnimation(_focus, SimplusActionState.Focused);
         }
 
-        public void SetMouseState(MouseState state)
+        public void SetMouseState(HelperMouseState state)
         {
-            if (MouseState.Down == state)
+            if (HelperMouseState.Down == state)
             {
                 Clear();
                 if (_focus != null)
@@ -72,7 +72,7 @@ namespace SimpleTeam.GameOne.Scene
                     _source._wrapper.SetPressed(true);
                 }
             }
-            if (MouseState.Up == state)
+            if (HelperMouseState.Up == state)
             {
                 if(_source != null && _focus != null && _focus != _source)
                 {
