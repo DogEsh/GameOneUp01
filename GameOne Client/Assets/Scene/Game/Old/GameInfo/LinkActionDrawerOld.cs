@@ -25,7 +25,7 @@ namespace SimpleTeam.GameOne.Scene
         public void Start()
         {
             // Customly set the pivot
-            LinkSprite = Resources.Load("Game/Textures/ArrowPrefab", typeof(Sprite)) as Sprite;
+            LinkSprite = Resources.Load("GameOld/Textures/Arrow", typeof(Sprite)) as Sprite;
             ShearsSprite = Resources.Load("ShearsSprite", typeof(Sprite)) as Sprite;
 
             _instance = new GameObject("LinkSpriteInstance");

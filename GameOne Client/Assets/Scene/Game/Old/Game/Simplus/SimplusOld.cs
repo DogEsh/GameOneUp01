@@ -19,7 +19,7 @@ namespace SimpleTeam.GameOne.Scene
 
 
         //rm
-        private const string _pathLink = "Game/SimplusLinkPrefab";
+        private const string _pathLink = "GameOld/SimplusLinkPrefab";
         private GameObject _linkPrefab;
 
         //rm

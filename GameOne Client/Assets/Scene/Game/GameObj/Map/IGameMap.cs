@@ -8,8 +8,8 @@ namespace SimpleTeam.GameOne.Scene
 {
     interface IGameMap : IGameObj
     {
-        void SetToInit(IMapInfo mapInfo);
-        void SetToUpdate(IMapInfo mapInfo);
+        void InitInfo(IMapInfo info);
+        void UpdateInfo(IMapInfo info);
         ISimplus GetFocusedSimplus(Vector2 focusPos);
 
     }

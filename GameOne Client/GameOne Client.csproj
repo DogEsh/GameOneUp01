@@ -114,6 +114,8 @@
     <Compile Include="Assets\Scene\Menu\Window\GUI\IGUISign.cs" />
     <Compile Include="Assets\Scene\Menu\Window\WindowMenu.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\Scene\Game\Manager\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

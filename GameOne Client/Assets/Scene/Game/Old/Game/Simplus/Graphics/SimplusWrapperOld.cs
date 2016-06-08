@@ -11,7 +11,7 @@ namespace SimpleTeam.GameOne.Scene
     {
         private SimplusActionStaterOld stater = new SimplusActionStaterOld();
         private Circle _circle;
-        public GameObject _obj;
+        public GameObject MyInstance;
         private SimplusAnimationManagerOld _animManager;
 
         public void Start()
@@ -21,7 +21,7 @@ namespace SimpleTeam.GameOne.Scene
             Sprite spr = circleObject.GetComponent<SpriteRenderer>().sprite;
             float radius = (spr.texture.width / 2) / spr.pixelsPerUnit * 0.8f;
             _circle = new Circle(pos, radius);
-            _animManager = new SimplusAnimationManagerOld(_obj.GetComponent<Animator>());
+            _animManager = new SimplusAnimationManagerOld(MyInstance.GetComponent<Animator>());
         }
 
         public Vector2 GetPos()

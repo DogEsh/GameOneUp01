@@ -25,11 +25,11 @@ namespace SimpleTeam.GameOne.Scene
             MessageDataGameMap data = message as IMessageData as MessageDataGameMap;
             if (data.State == MessageDataGameMap.HelperState.Init)
             {
-                _map.SetToInit(data.Map);
+                _map.SetToInitInfo(data.Map);
             }
             else if (data.State == MessageDataGameMap.HelperState.Update)
             {
-                _map.SetToUpdate(data.Map);
+                _map.SetToUpdateInfo(data.Map);
             }
         }
     }

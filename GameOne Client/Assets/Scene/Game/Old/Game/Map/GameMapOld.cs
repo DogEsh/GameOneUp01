@@ -13,9 +13,10 @@ namespace SimpleTeam.GameOne.Scene
         private ArrayList _mapInitInfo;
 
         //send it somewhere else
-        public GameObject SimplusRedPrefab;
-
-        public void Start()
+        
+        private GameObject _simplusRedPrefab;
+        private const string _pathSimplusRed = "Game/SimplusRedPrefab";
+         public void Start()
         {
             //CreateMapObjects();
 
@@ -26,6 +27,7 @@ namespace SimpleTeam.GameOne.Scene
                 SimplusOld simpl = obj.GetComponent<SimplusOld>();
                 _simplusContainer.Add(simpl);
             }
+            _simplusRedPrefab = Resources.Load<GameObject>(_pathSimplusRed);
         }
 
         public void CreateMapObjects()
@@ -48,7 +50,7 @@ namespace SimpleTeam.GameOne.Scene
             //depending on info we choose one of prefabs
 
             //assume we choosed red one
-            GameObject go = Instantiate(SimplusRedPrefab);
+            GameObject go = Instantiate(_simplusRedPrefab);
             SimplusOld simp = go.GetComponent<SimplusOld>();
             go.name = "Simplus_" + info.Party.ID.ToString();
 

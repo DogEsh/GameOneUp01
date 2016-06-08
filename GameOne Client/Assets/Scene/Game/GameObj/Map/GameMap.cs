@@ -1,61 +1,108 @@
 ﻿using SimpleTeam.GameOne.GameInfo;
 using System.Collections.Generic;
 using System;
-
+using UnityEngine;
 namespace SimpleTeam.GameOne.Scene
 {
-    using UnityEngine;
+   
     using GameObjID = UInt16;
-    class GameMap : MonoBehaviour, IGameMap
+    class GameMap : GameObjBase, IGameMap
     {
         private IMapInfo _info;
         private Dictionary<GameObjID, ISimplus> _simpluses = null;
 
+        private enum HelperStateInfo
+        {
+            None,
+            Update,
+            Init
+        }
+        HelperStateInfo _stateInfo;
+        object _lockerInfo = new object();
 
-        private string _pathSimplus = "wtf";
+
+        private string _pathSimplus = "Game/SimplusPrefab";
         private GameObject _simplusPrefab;
 
-        public ushort ID {get {return 0;}}
+        public override GameObjID ID{ get { return 0; } }
 
         private void Start()
         {
             _simplusPrefab = Resources.Load<GameObject>(_pathSimplus);
         }
-        //NetworkMap
-        public void SetToInitInfo(IMapInfo info)
+
+
+
+        private void Update()
         {
-            _info = info;
-            ClearInfo();
-            InitInfo();
-        }
-        public void SetToUpdateInfo(IMapInfo info)
-        {
-            _info = info;
-            UpdateInfo();
+            if (base.CheckDestroy()) return;
+
+            CheckInfo();
+            
         }
 
-        private void UpdateInfo()
+        private void CheckInfo()
+        {
+            if (_stateInfo == HelperStateInfo.None) return;
+
+            lock (_lockerInfo)
+            {
+                if (_stateInfo == HelperStateInfo.Init)
+                {
+                    DestroySimplus();
+                    InitSimplus();
+                    _stateInfo = HelperStateInfo.Update;
+                }
+
+                if (_stateInfo == HelperStateInfo.Update)
+                {
+                    UpdateSimplus();
+                    _stateInfo = HelperStateInfo.None;
+                }
+            }
+        }
+        //NetworkMap
+        public void InitInfo(IMapInfo info)
+        {
+            lock (_lockerInfo)
+            {
+                _info = info;
+                _stateInfo = HelperStateInfo.Init;
+            }
+        }
+        public void UpdateInfo(IMapInfo info)
+        {
+            lock (_lockerInfo)
+            {
+                _info = info;
+                _stateInfo = HelperStateInfo.Update;
+            }
+        }
+
+        private void UpdateSimplus()
         {
             foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
                 _simpluses[s.ID].UpdateInfo(s);
             }
         }
-        private void InitInfo()
+        private void InitSimplus()
         {
             _simpluses = new Dictionary<GameObjID, ISimplus>();
             foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
-                _simpluses.Add(s.ID, new Simplus());
+                GameObject _inst = Instantiate(_simplusPrefab);
+                ISimplus simplus = _inst.GetComponent<ISimplus>();
+                _simpluses.Add(s.ID, simplus);
             }
         }
-        private void ClearInfo()
+        private void DestroySimplus()
         {
             if (_simpluses != null)
             {
                 foreach (ISimplus s in _simpluses.Values)
                 {
-                    s.Destroy();
+                    s.RequestDestroy();
                 }
                 _simpluses = null;
             }
@@ -75,19 +122,10 @@ namespace SimpleTeam.GameOne.Scene
             return null;
         }
 
-        public void SetToInit(IMapInfo mapInfo)
+        public override void Destroy()
         {
-            throw new NotImplementedException();
-        }
-
-        public void SetToUpdate(IMapInfo mapInfo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Destroy()
-        {
-            throw new NotImplementedException();
+            DestroySimplus();
+            Destroy(MyInstance);
         }
     }
 }

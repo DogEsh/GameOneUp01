@@ -1,23 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SimpleTeam.GameOne.GameInfo;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    class SimplusLink : ISimplusLink
+    using GameObjID = UInt16;
+    class SimplusLink : GameObjBase, ISimplusLink
     {
-        public ushort ID
+        ISimplusLinkInfo _info;
+        public override GameObjID ID
         {
             get
             {
-                throw new NotImplementedException();
+                return _info.ID;
             }
         }
 
-        public void Destroy()
+        public void UpdateInfo(ISimplusLinkInfo info)
         {
-            throw new NotImplementedException();
+            _info = info;
+        }
+        public override void Destroy()
+        {
+            Destroy(MyInstance);
         }
     }
 }
