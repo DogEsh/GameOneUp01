@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SimpleTeam.GameOne.GameInfo;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    interface ISimplus
+    class SimplusLink : ISimplusLink
     {
-        void UpdateInfo(ISimplusInfo info);
-        void Destroy();
-
     }
 }

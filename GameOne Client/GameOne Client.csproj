@@ -78,9 +78,11 @@
     <Compile Include="Assets\Scene\Containers\MessageContainer.cs" />
     <Compile Include="Assets\Scene\Game\GameManager.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Map\GameMap.cs" />
-    <Compile Include="Assets\Scene\Game\GameObj\ISimplus.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\SimplusLink\ISimplusLink.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\SimplusLink\SimplusLink.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\ISimplus.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Map\IGameMap.cs" />
-    <Compile Include="Assets\Scene\Game\GameObj\Simplus.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\Simplus.cs" />
     <Compile Include="Assets\Scene\Game\Handler\MessageHandlerClientGameMap.cs" />
     <Compile Include="Assets\Scene\Game\Handler\MessageHandlerClientGameState.cs" />
     <Compile Include="Assets\Scene\Game\Old\Game\Link\SimplusLinkOld.cs" />
@@ -110,5 +112,6 @@
     <Compile Include="Assets\Scene\Menu\Window\GUI\IGUISign.cs" />
     <Compile Include="Assets\Scene\Menu\Window\WindowMenu.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

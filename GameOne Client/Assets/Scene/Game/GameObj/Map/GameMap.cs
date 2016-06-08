@@ -53,12 +53,16 @@ namespace SimpleTeam.GameOne.Scene
 
 
         //GameManager
-        public ISimplus GetFocusedSimplus(Vector2 pos)
+        public ISimplus GetFocusedSimplus(Vector2 focusPos)
         {
-            foreach(ISimplusInfo s in _mapInfo.GetContainerSimplus())
+            foreach (ISimplus s in _simpluses.Values)
             {
-                
+                if (s.IsFocused(focusPos))
+                {
+                    return s;
+                }
             }
+            return null;
         }
     }
 }

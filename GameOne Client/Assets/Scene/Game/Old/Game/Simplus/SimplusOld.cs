@@ -104,6 +104,8 @@ namespace SimpleTeam.GameOne.Scene
         //rm
         public SimplusLinkOld CreateLink(SimplusOld destination)
         {
+            string path = "Assets/Scene/Game/Old/Game/Link/SimplusLinkPrefab";
+            GameObject _linkPrefab = Resources.Load(path) as GameObject;
             //_link = new SimplusLink(this, destination);
             GameObject linkObj = Instantiate(LinkPrefab);
             _link = linkObj.GetComponent<SimplusLinkOld>();
