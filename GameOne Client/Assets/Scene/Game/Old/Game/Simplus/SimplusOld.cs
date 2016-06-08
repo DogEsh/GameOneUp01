@@ -16,10 +16,11 @@ namespace SimpleTeam.GameOne.Scene
 
         public GameMapOld _map;
 
-        
+
 
         //rm
-        public GameObject LinkPrefab;
+        private const string _pathLink = "Game/SimplusLinkPrefab";
+        private GameObject _linkPrefab;
 
         //rm
         private SimplusLinkOld _link;
@@ -34,9 +35,9 @@ namespace SimpleTeam.GameOne.Scene
 
         //public SimplusInfo Info { get; set; }
 
-        public SimplusOld()
+        private void Start()
         {
-            //_wrapper = new SimplusWrapper();
+            _linkPrefab = Resources.Load<GameObject>(_pathLink);
         }
 
         public void InitInfo(SimplusInfo info)
@@ -104,10 +105,9 @@ namespace SimpleTeam.GameOne.Scene
         //rm
         public SimplusLinkOld CreateLink(SimplusOld destination)
         {
-            string path = "Assets/Scene/Game/Old/Game/Link/SimplusLinkPrefab";
-            GameObject _linkPrefab = Resources.Load(path) as GameObject;
+            
             //_link = new SimplusLink(this, destination);
-            GameObject linkObj = Instantiate(LinkPrefab);
+            GameObject linkObj = Instantiate(_linkPrefab);
             _link = linkObj.GetComponent<SimplusLinkOld>();
             _link.SetSimplusLinkData(this, destination);
             return _link;

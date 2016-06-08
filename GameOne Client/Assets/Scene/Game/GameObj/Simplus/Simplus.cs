@@ -10,17 +10,25 @@ namespace SimpleTeam.GameOne.Scene
     class Simplus : MonoBehaviour, ISimplus
     {
         ISimplusInfo _info;
-        public Simplus(ISimplusInfo info)
+
+        private const string _pathLink = "wtf";
+        private GameObject _linkPrefab;
+        private void Start()
         {
-            _info = info;
+            _info = null;
+            _linkPrefab = Resources.Load<GameObject>(_pathLink);
         }
+
+
         public void Destroy()
         {
+            GameObject b = null;
             throw new NotImplementedException();
         }
 
         public bool IsFocused(Vector2 focusPos)
         {
+            if (_info == null) return false;
             return _info.Obj2D.IsFocused(focusPos);
         }
 

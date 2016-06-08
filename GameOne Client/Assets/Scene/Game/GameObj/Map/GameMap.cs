@@ -6,11 +6,18 @@ namespace SimpleTeam.GameOne.Scene
 {
     using UnityEngine;
     using GameObjID = UInt16;
-    class GameMap : IGameMap
+    class GameMap : MonoBehaviour, IGameMap
     {
         private IMapInfo _mapInfo;
         private Dictionary<GameObjID, ISimplus> _simpluses = null;
 
+        private string _pathSimplus = "wtf";
+        private GameObject _simplusPrefab;
+
+        private void Start()
+        {
+            _simplusPrefab = Resources.Load<GameObject>(_pathSimplus);
+        }
         //NetworkMap
         public void SetToInit(IMapInfo mapInfo)
         {
@@ -36,7 +43,7 @@ namespace SimpleTeam.GameOne.Scene
             _simpluses = new Dictionary<GameObjID, ISimplus>();
             foreach (ISimplusInfo s in _mapInfo.GetContainerSimplus())
             {
-                _simpluses.Add(s.ID, new Simplus(s));
+                _simpluses.Add(s.ID, new Simplus());
             }
         }
         private void Clear()
