@@ -28,10 +28,12 @@ namespace SimpleTeam.GameOne.Scene
         GameManager _gameManager;
         private void Start()
         {
-            IGameMap m = CreateMap();
-            CreateGameManager(m);
-            _sceneMessages = new SceneClientGameMessages(m);
-            m.InitInfo(Create());
+            IGameMap map = CreateMap();
+            map.InitInfo(CreateMapInfo());
+            _sceneMessages = new SceneClientGameMessages(map);
+            
+            BuilderGameManager b = new BuilderGameManager();
+            b.Create(map, _sceneScenario.GetScenario());
         }
         private IGameMap CreateMap()
         {
@@ -40,20 +42,12 @@ namespace SimpleTeam.GameOne.Scene
             GameObject inst = Instantiate(prefab);
             return inst.GetComponent<GameMap>();
         }
-        private void CreateGameManager(IGameMap map)
-        {
-            const string path = "Game/GameManagerPrefab";
-            GameObject prefab = Resources.Load<GameObject>(path);
-            GameObject inst = Instantiate(prefab);
-            _gameManager = inst.GetComponent<GameManager>();
-            _gameManager.SetMap(map);
-        }
 
         private void Update()
         {
         }
 
-        public IMapInfo Create()
+        public IMapInfo CreateMapInfo()
         {
             ISimplusInfo simplus;
             Circle circle;
@@ -65,7 +59,7 @@ namespace SimpleTeam.GameOne.Scene
             linkContainer = new LinkInfoList();
             party = new Party(5);
             simplusHp = new SimplusHP(10, 100, 10);
-            circle = new Circle(new Vector2(Screen.height/2, Screen.width/2),1f);
+            circle = new Circle(new Vector2(Screen.height/2, Screen.width/2),3f);
             simplus = new SimplusInfo(1, circle, simplusHp, party, linkContainer);
             mySimplus = new GameObjList<ISimplusInfo>();
             mySimplus.SetObj(simplus);
