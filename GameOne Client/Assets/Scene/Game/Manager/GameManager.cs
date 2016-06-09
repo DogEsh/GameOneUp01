@@ -8,13 +8,16 @@ namespace SimpleTeam.GameOne.Scene
     {
         Cursor _cursor;
         MouseManager _mouse;
-        IGameMap _map;
+        
         LinkManager _linkManager;
+
+        IGameMap _map;
+        IScenario _scenario;
 
         private void Start()
         {
             _mouse = new MouseManager();
-            _linkManager = new LinkManager(new ScenarioQueue());
+            _linkManager = new LinkManager(_scenario);
             CreateCursor();
         }
         private void CreateCursor()
@@ -24,9 +27,10 @@ namespace SimpleTeam.GameOne.Scene
             GameObject inst = Instantiate(prefab);
             _cursor = inst.GetComponent<Cursor>();
         }
-        public void SetMap(IGameMap map)
+        public void Initialize(IGameMap map, IScenario scenario)
         {
             _map = map;
+            _scenario = scenario;
         }
         private void Update()
         {
