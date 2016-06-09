@@ -19,7 +19,13 @@ namespace SimpleTeam.GameOne.GameInfo
         {
             _radius = radius;
         }
-
+        public float Radius
+        {
+            get
+            {
+                return _radius;
+            }
+        }
         public Vector2 Pos
         {
             get
