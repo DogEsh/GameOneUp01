@@ -12,15 +12,17 @@ namespace SimpleTeam.GameOne.Scene
         Cursor _cursor;
         MouseManager _mouse;
         IGameMap _map;
+        LinkManager _linkManager;
 
         private void Start()
         {
             _mouse = new MouseManager();
+            _linkManager = new LinkManager();
             CreateCursor();
         }
         private void CreateCursor()
         {
-            const string path= "Game/CursorPrefab";
+            const string path = "Game/CursorPrefab";
             GameObject prefab = Resources.Load<GameObject>(path);
             GameObject inst = Instantiate(prefab);
             _cursor = inst.GetComponent<Cursor>();
