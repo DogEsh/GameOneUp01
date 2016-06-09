@@ -14,6 +14,7 @@ namespace SimpleTeam.GameOne.Scene
         private Dictionary<GameObjID, ISimplusLink> _links = null;
         private const string _pathLink = "Game/SimplusLinkPrefab";
         private GameObject _linkPrefab;
+        private SimplusGraghics _simplusGraghics;
 
         private enum HelperStateInfo
         {
@@ -41,17 +42,18 @@ namespace SimpleTeam.GameOne.Scene
         private void Start()
         {
             _info = null;
+            _stateInfo = HelperStateInfo.None;
             _links = new Dictionary<GameObjID, ISimplusLink>();
             _linkPrefab = Resources.Load<GameObject>(_pathLink);
+            _simplusGraghics = new SimplusGraghics(base.MyInstance, _info);
         }
 
         private void Update()
         {
             if (base.CheckDestroy()) return;
-
+            if (_info == null) return;
             CheckInfo();
-
-            
+            _simplusGraghics.UpdateGraghics();
         }
 
         private void CheckInfo()

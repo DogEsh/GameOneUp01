@@ -76,7 +76,9 @@
     <Compile Include="Assets\Scene\Containers\Case.cs" />
     <Compile Include="Assets\Scene\Containers\IMessageContainer.cs" />
     <Compile Include="Assets\Scene\Containers\MessageContainer.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\SimplusGraghics.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Cursor\Cursor.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Cursor\CursorGraphics.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Cursor\ICursor.cs" />
     <Compile Include="Assets\Scene\Game\Manager\GameManager.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\GameObjBase.cs" />

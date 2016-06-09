@@ -37,7 +37,7 @@ namespace SimpleTeam.GameOne.Scene
         private void Update()
         {
             if (base.CheckDestroy()) return;
-
+            if (_info == null) return;
             CheckInfo();
             
         }
