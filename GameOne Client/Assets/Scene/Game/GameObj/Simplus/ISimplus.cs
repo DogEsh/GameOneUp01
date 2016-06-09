@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    interface ISimplus : IGameObj
+    public interface ISimplus : IGameObj
     {
         void UpdateInfo(ISimplusInfo info);
         ISimplusInfo GetInfo();

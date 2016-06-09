@@ -6,7 +6,7 @@ using SimpleTeam.GameOne.GameInfo;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    interface IGameObj : IGameObjID
+    public interface IGameObj : IGameObjID
     {
         void RequestDestroy();
     }

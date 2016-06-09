@@ -4,7 +4,7 @@ using SimpleTeam.GameOne.GameInfo;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour
     {
         Cursor _cursor;
         MouseManager _mouse;
@@ -25,7 +25,9 @@ namespace SimpleTeam.GameOne.Scene
             const string path = "Game/CursorPrefab";
             GameObject prefab = Resources.Load<GameObject>(path);
             GameObject inst = Instantiate(prefab);
+            inst.transform.parent = gameObject.transform;
             _cursor = inst.GetComponent<Cursor>();
+
         }
         public void Initialize(IGameMap map, IScenario scenario)
         {

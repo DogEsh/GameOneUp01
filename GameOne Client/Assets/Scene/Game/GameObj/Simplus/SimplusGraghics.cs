@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    class SimplusGraghics
+    public class SimplusGraghics
     {
         private ISimplusInfo _info;
         private GameObject _mySimplus;
@@ -26,10 +26,9 @@ namespace SimpleTeam.GameOne.Scene
         public void UpdateGraghics()
         {
             Vector3 _position = new Vector3(_info.Obj2D.Pos.x, _info.Obj2D.Pos.y,  0f);
-            Vector3 _scale = new Vector3(_info.Obj2D.Radius, _info.Obj2D.Radius, 0f);
+            Vector3 _scale = new Vector3(4f, 4f, 0f);
             _mySimplus.transform.position = _position;
             _mySimplus.transform.localScale = _scale;
-            _mySimplus.SetActive(true);
         }
 
         public void SetGraghicsActive(bool activity)

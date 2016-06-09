@@ -7,9 +7,8 @@ using SimpleTeam.GameOne.GameInfo;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    abstract class GameObjBase : MonoBehaviour, IGameObj
+    public abstract class GameObjBase : MonoBehaviour, IGameObj
     {
-        public GameObject MyInstance;
         private bool _isToDestroy = false;
         protected bool IsToDestroy
         {

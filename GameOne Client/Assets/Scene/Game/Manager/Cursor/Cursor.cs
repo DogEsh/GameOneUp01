@@ -9,7 +9,6 @@ namespace SimpleTeam.GameOne.Scene
 {
     class Cursor : MonoBehaviour, ICursor
     {
-        public GameObject MyInstance;
         private CursorGraphics _cursorGraghics;
         DragInfo _dragInfo = new DragInfo();
         
@@ -23,7 +22,7 @@ namespace SimpleTeam.GameOne.Scene
         }
         private void Start()
         {
-            _cursorGraghics = new CursorGraphics(MyInstance);
+            _cursorGraghics = new CursorGraphics(gameObject);
         }
 
         private void Update()

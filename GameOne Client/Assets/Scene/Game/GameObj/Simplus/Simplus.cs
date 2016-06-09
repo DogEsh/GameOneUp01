@@ -8,7 +8,7 @@ using UnityEngine;
 namespace SimpleTeam.GameOne.Scene
 {
     using GameObjID = UInt16;
-    class Simplus : GameObjBase, ISimplus
+    public class Simplus : GameObjBase, ISimplus
     {
         ISimplusInfo _info;
         private Dictionary<GameObjID, ISimplusLink> _links = null;
@@ -38,7 +38,7 @@ namespace SimpleTeam.GameOne.Scene
             _stateInfo = HelperStateInfo.None;
             _links = new Dictionary<GameObjID, ISimplusLink>();
             _linkPrefab = Resources.Load<GameObject>(_pathLink);
-            _simplusGraghics = new SimplusGraghics(base.MyInstance, _info);
+            _simplusGraghics = new SimplusGraghics(gameObject, _info);
         }
 
         private void Update()
@@ -46,6 +46,7 @@ namespace SimpleTeam.GameOne.Scene
             if (base.CheckDestroy()) return;
             if (_info == null) return;
             CheckInfo();
+            _simplusGraghics.SetGraghicsActive(true);
             _simplusGraghics.UpdateGraghics();
         }
 
@@ -85,8 +86,9 @@ namespace SimpleTeam.GameOne.Scene
             {
                 if (!_links.ContainsKey(inf.ID))
                 {
-                    GameObject _inst = Instantiate(_linkPrefab);
-                    ISimplusLink link = _inst.GetComponent<ISimplusLink>();
+                    GameObject inst = Instantiate(_linkPrefab);
+                    inst.transform.parent = gameObject.transform;
+                    ISimplusLink link = inst.GetComponent<ISimplusLink>();
                     _links.Add(inf.ID, link);
                 }
             }
@@ -123,7 +125,8 @@ namespace SimpleTeam.GameOne.Scene
         public override void Destroy()
         {
             DestroyLinks();
-            Destroy(MyInstance);
+            
+            Destroy(gameObject);
         }
 
         public ISimplusInfo GetInfo()

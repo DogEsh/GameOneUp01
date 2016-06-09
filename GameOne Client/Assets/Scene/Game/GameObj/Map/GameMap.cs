@@ -6,7 +6,7 @@ namespace SimpleTeam.GameOne.Scene
 {
    
     using GameObjID = UInt16;
-    class GameMap : GameObjBase, IGameMap
+    public class GameMap : GameObjBase, IGameMap
     {
         private IMapInfo _info;
         private Dictionary<GameObjID, ISimplus> _simpluses = null;
@@ -93,8 +93,9 @@ namespace SimpleTeam.GameOne.Scene
             if (_info == null) return;
             foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
-                GameObject _inst = Instantiate(_simplusPrefab);
-                ISimplus simplus = _inst.GetComponent<ISimplus>();
+                GameObject inst = Instantiate(_simplusPrefab);
+                inst.transform.parent = gameObject.transform;
+                ISimplus simplus = inst.GetComponent<ISimplus>();
                 _simpluses.Add(s.ID, simplus);
             }
         }
@@ -127,7 +128,7 @@ namespace SimpleTeam.GameOne.Scene
         public override void Destroy()
         {
             DestroySimplus();
-            Destroy(MyInstance);
+            Destroy(gameObject);
         }
     }
 }

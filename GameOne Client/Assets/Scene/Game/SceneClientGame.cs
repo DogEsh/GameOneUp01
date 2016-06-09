@@ -24,22 +24,21 @@ namespace SimpleTeam.GameOne.Scene
             _sceneMessages.SetMessage(message);
         }
 
-        //GameManager
-        GameManager _gameManager;
+
         private void Start()
         {
             IGameMap map = CreateMap();
             map.InitInfo(CreateMapInfo());
             _sceneMessages = new SceneClientGameMessages(map);
-            
-            BuilderGameManager b = new BuilderGameManager();
-            b.Create(map, _sceneScenario.GetScenario());
+
+            CreateGameManager(map, _sceneScenario.GetScenario());
         }
         private IGameMap CreateMap()
         {
             const string path = "Game/GameMapPrefab";
             GameObject prefab = Resources.Load<GameObject>(path);
             GameObject inst = Instantiate(prefab);
+            inst.transform.parent = gameObject.transform;
             return inst.GetComponent<GameMap>();
         }
 
@@ -65,6 +64,18 @@ namespace SimpleTeam.GameOne.Scene
             mySimplus.SetObj(simplus);
             IMapInfo mapInfo = new MapInfo(mySimplus);
             return mapInfo;
+        }
+
+        public GameManager CreateGameManager(IGameMap map, IScenario scenario)
+        {
+            GameManager gameManager;
+            const string path = "Game/GameManagerPrefab";
+            GameObject prefab = Resources.Load<GameObject>(path);
+            GameObject inst = Instantiate(prefab);
+            inst.transform.parent = gameObject.transform;
+            gameManager = inst.GetComponent<GameManager>();
+            gameManager.Initialize(map, scenario);
+            return gameManager;
         }
     }
 }

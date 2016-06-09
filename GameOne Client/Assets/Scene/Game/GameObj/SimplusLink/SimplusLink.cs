@@ -21,7 +21,7 @@ namespace SimpleTeam.GameOne.Scene
         }
         public override void Destroy()
         {
-            Destroy(MyInstance);
+            Destroy(gameObject);
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    interface IGameMap : IGameObj
+    public interface IGameMap : IGameObj
     {
         void InitInfo(IMapInfo info);
         void UpdateInfo(IMapInfo info);
