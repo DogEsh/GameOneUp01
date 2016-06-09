@@ -2,7 +2,7 @@
 using SimpleTeam.Command;
 using System;
 using SimpleTeam.Command.Scenario;
-using SimpleTeam.GameOne.Message;
+using SimpleTeam.GameOne.GameInfo;
 using SimpleTeam.Message;
 
 namespace SimpleTeam.GameOne.Scene
@@ -31,7 +31,7 @@ namespace SimpleTeam.GameOne.Scene
             IGameMap m = CreateMap();
             CreateGameManager(m);
             _sceneMessages = new SceneClientGameMessages(m);
-            
+            m.InitInfo(Create());
         }
         private IGameMap CreateMap()
         {
@@ -51,6 +51,26 @@ namespace SimpleTeam.GameOne.Scene
 
         private void Update()
         {
+        }
+
+        public IMapInfo Create()
+        {
+            ISimplusInfo simplus;
+            Circle circle;
+            ISimplusHP simplusHp;
+            IParty party;
+            ILinkInfoContainer linkContainer;
+            IGameObjContainer<ISimplusInfo> mySimplus;
+
+            linkContainer = new LinkInfoList();
+            party = new Party(5);
+            simplusHp = new SimplusHP(10, 100, 10);
+            circle = new Circle(new Vector2(Screen.height/2, Screen.width/2),1f);
+            simplus = new SimplusInfo(1, circle, simplusHp, party, linkContainer);
+            mySimplus = new GameObjList<ISimplusInfo>();
+            mySimplus.SetObj(simplus);
+            IMapInfo mapInfo = new MapInfo(mySimplus);
+            return mapInfo;
         }
     }
 }
