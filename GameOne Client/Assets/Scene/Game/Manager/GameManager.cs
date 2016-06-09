@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SimpleTeam.Command.Scenario;
 using UnityEngine;
 using SimpleTeam.GameOne.GameInfo;
 
@@ -17,7 +14,7 @@ namespace SimpleTeam.GameOne.Scene
         private void Start()
         {
             _mouse = new MouseManager();
-            _linkManager = new LinkManager();
+            _linkManager = new LinkManager(new ScenarioQueue());
             CreateCursor();
         }
         private void CreateCursor()
