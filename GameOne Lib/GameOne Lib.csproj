@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="Command\CommandSendMessageScene.cs" />
     <Compile Include="GameInfo\Obj2D\DragInfo.cs" />
+    <Compile Include="Message\Game\GamerCommand\LinkInfoCreate.cs" />
+    <Compile Include="Message\Game\GamerCommand\LinkInfoDestroy.cs" />
     <Compile Include="Parameter\MessageManager\IParametersMessagesManager.cs" />
     <Compile Include="Parameter\MessageManager\ParametersMessagesManager.cs" />
     <Compile Include="Parameter\Main\ParameterMain.cs" />
@@ -87,7 +89,7 @@
     <Compile Include="GameInfo\Party\IParty.cs" />
     <Compile Include="GameInfo\Party\Party.cs" />
     <Compile Include="Message\Game\MessageDataGameMap.cs" />
-    <Compile Include="Message\Game\MessageDataGamerCommand.cs" />
+    <Compile Include="Message\Game\GamerCommand\MessageDataGamerCommand.cs" />
     <Compile Include="Message\Game\MessageDataGameState.cs" />
     <Compile Include="Message\MessagesManager\IMessagesManager.cs" />
     <Compile Include="Message\MessagesManager\IMessagesManagerNetwork.cs" />
