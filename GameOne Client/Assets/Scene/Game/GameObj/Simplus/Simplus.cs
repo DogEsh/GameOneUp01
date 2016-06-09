@@ -34,11 +34,11 @@ namespace SimpleTeam.GameOne.Scene
 
         private void Start()
         {
-            _info = null;
             _stateInfo = HelperStateInfo.None;
             _links = new Dictionary<GameObjID, ISimplusLink>();
             _linkPrefab = Resources.Load<GameObject>(_pathLink);
             _simplusGraghics = new SimplusGraghics(gameObject, _info);
+            _simplusGraghics.SetGraghicsActive(true);
         }
 
         private void Update()
@@ -46,7 +46,6 @@ namespace SimpleTeam.GameOne.Scene
             if (base.CheckDestroy()) return;
             if (_info == null) return;
             CheckInfo();
-            _simplusGraghics.SetGraghicsActive(true);
             _simplusGraghics.UpdateGraghics();
         }
 

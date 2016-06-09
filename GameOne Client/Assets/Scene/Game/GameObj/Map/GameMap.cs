@@ -30,6 +30,7 @@ namespace SimpleTeam.GameOne.Scene
         {
             _simplusPrefab = Resources.Load<GameObject>(_pathSimplus);
             InitSimplus();
+            UpdateSimplus();
         }
 
 

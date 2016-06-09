@@ -15,18 +15,21 @@ namespace SimpleTeam.GameOne.Scene
         public SimplusGraghics(GameObject mySimplus, ISimplusInfo info)
         {
             _mySimplus = mySimplus;
-            _info = info;
             _mySimplus.AddComponent<SpriteRenderer>();
-            //Texture2D texture = Resources.Load("Game/Textures/TextureSimpluses", typeof(Texture2D)) as Texture2D;
-            //_simplusSprite = Sprite.Create(texture, new Rect(0, 0, texture.width / 4, texture.height), new Vector2(texture.width / 8, texture.height / 2));
-            _simplusSprite = Resources.Load("Game/Textures/TextureSimpluses_copy", typeof(Sprite)) as Sprite;
+
+            Texture2D texture = Resources.Load("Game/Textures/TextureSimpluses", typeof(Texture2D)) as Texture2D;
+            Vector2 center = new Vector2(0.5f, 0.5f);
+            Rect rect = new Rect(texture.width / 4 * (info.ID%4), 0, texture.width/4, texture.height);
+
+            _simplusSprite = Sprite.Create(texture, rect, center);
             _mySimplus.GetComponent<SpriteRenderer>().sprite = _simplusSprite;
+            _info = info;
         }
 
         public void UpdateGraghics()
         {
             Vector3 _position = new Vector3(_info.Obj2D.Pos.x, _info.Obj2D.Pos.y,  0f);
-            Vector3 _scale = new Vector3(4f, 4f, 0f);
+            Vector3 _scale = new Vector3(_info.Obj2D.Radius, _info.Obj2D.Radius, 0f);
             _mySimplus.transform.position = _position;
             _mySimplus.transform.localScale = _scale;
         }
