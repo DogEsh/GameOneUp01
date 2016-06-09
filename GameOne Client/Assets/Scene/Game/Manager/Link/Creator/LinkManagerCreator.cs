@@ -36,7 +36,8 @@ namespace SimpleTeam.GameOne.Scene
         }
         private void SendToNetwork()
         {
-            IMessageData data = new MessageDataGamerCommand();
+            LinkInfoCreate info = new LinkInfoCreate(_source.GetInfo(), _destination.GetInfo());
+            IMessageData data = new MessageDataGamerCommand(info);
             IMessage msg = new MessageRealization(data);
             ICommand cmd = new CommandSendMessageNetwork(msg);
             _scenario.Set(cmd);

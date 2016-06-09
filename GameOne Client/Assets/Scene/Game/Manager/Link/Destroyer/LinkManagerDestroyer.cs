@@ -48,10 +48,11 @@ namespace SimpleTeam.GameOne.Scene
 
         private void SendToNetwork()
         {
-            IMessageData data = new MessageDataGamerCommand();
-            IMessage msg = new MessageRealization(data);
-            ICommand cmd = new CommandSendMessageNetwork(msg);
-            _scenario.Set(cmd);
+            //nothing
+            //IMessageData data = new MessageDataGamerCommand();
+            //IMessage msg = new MessageRealization(data);
+            //ICommand cmd = new CommandSendMessageNetwork(msg);
+            //_scenario.Set(cmd);
         }
 
         public LinkManagerDestroyer(IScenario scenario)

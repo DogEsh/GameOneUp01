@@ -36,7 +36,7 @@ namespace SimpleTeam.GameOne.Scene
             ISimplus s = mouse.FocusSimplus;
             IObj2D obj;
             if (s == null) obj = new Point(mouse.Pos);
-            else obj = s.Obj2D;
+            else obj = s.GetInfo().Obj2D;
 
 
             if (HelperMouseState.Down == mouse.State.Get())

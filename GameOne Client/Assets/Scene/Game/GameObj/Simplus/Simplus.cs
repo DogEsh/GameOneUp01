@@ -30,13 +30,6 @@ namespace SimpleTeam.GameOne.Scene
                 return _info.ID;
             }
         }
-        public IObj2D Obj2D
-        {
-            get
-            {
-                return _info.Obj2D;
-            }
-        }
 
 
         private void Start()
@@ -131,6 +124,16 @@ namespace SimpleTeam.GameOne.Scene
         {
             DestroyLinks();
             Destroy(MyInstance);
+        }
+
+        public ISimplusInfo GetInfo()
+        {
+            ISimplusInfo i;
+            lock (_lockerInfo)
+            {
+                i = _info;
+            }
+            return i;
         }
     }
 }
