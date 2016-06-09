@@ -59,6 +59,11 @@ namespace SimpleTeam.GameOne.Scene
             _animManager.SetActionState(stater.GetState());
         }
 
+        public bool IsFocused(Vector2 pos, ITransformCoordinate tran)
+        {
+            throw new NotImplementedException();
+        }
+
         //public Vector2 GetPos()
         //{
         //    V = _obj.transform.position;

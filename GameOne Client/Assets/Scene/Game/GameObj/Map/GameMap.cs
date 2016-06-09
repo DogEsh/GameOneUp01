@@ -9,6 +9,7 @@ namespace SimpleTeam.GameOne.Scene
     public class GameMap : GameObjBase, IGameMap
     {
         private IMapInfo _info;
+        private ITransformCoordinateScreen _transform;
         private Dictionary<GameObjID, ISimplus> _simpluses = null;
 
         private enum HelperStateInfo
@@ -20,14 +21,13 @@ namespace SimpleTeam.GameOne.Scene
         HelperStateInfo _stateInfo;
         object _lockerInfo = new object();
 
-
-        private string _pathSimplus = "Game/SimplusPrefab";
         private GameObject _simplusPrefab;
 
         public override GameObjID ID{ get { return 0; } }
 
         private void Start()
         {
+            const string _pathSimplus = "Game/SimplusPrefab";
             _simplusPrefab = Resources.Load<GameObject>(_pathSimplus);
             InitSimplus();
             UpdateSimplus();
@@ -39,8 +39,8 @@ namespace SimpleTeam.GameOne.Scene
         {
             if (base.CheckDestroy()) return;
             if (_info == null) return;
+            _transform.Update();
             CheckInfo();
-            
         }
 
         private void CheckInfo()
@@ -69,6 +69,7 @@ namespace SimpleTeam.GameOne.Scene
             lock (_lockerInfo)
             {
                 _info = info;
+                _transform = new TransformCoordinateScreen(info.Coordinate);
                 _stateInfo = HelperStateInfo.Init;
             }
         }
@@ -97,6 +98,7 @@ namespace SimpleTeam.GameOne.Scene
                 GameObject inst = Instantiate(_simplusPrefab);
                 inst.transform.parent = gameObject.transform;
                 ISimplus simplus = inst.GetComponent<ISimplus>();
+                simplus.Initialize(_transform);
                 _simpluses.Add(s.ID, simplus);
             }
         }

@@ -32,5 +32,11 @@ namespace SimpleTeam.GameOne.GameInfo
         {
             return pos.Equals(_pos);
         }
+
+        public bool IsFocused(Vector2 pos, ITransformCoordinate tran)
+        {
+            Vector2 p = tran.TransformPos(_pos);
+            return pos.Equals(p);
+        }
     }
 }

@@ -11,6 +11,5 @@ namespace SimpleTeam.GameOne.Scene
         void InitInfo(IMapInfo info);
         void UpdateInfo(IMapInfo info);
         ISimplus GetFocusedSimplus(Vector2 focusPos);
-
     }
 }

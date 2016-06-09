@@ -55,6 +55,18 @@ namespace SimpleTeam.GameOne.GameInfo
             }
             return false;
         }
+
+        public bool IsFocused(Vector2 pos, ITransformCoordinate tran)
+        {
+            Vector2 p = tran.TransformPos(_pos);
+            p -= pos;
+            float r = tran.Size * _radius;
+            if (p.magnitude < r)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
 

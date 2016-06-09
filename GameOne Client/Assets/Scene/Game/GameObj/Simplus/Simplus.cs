@@ -10,9 +10,9 @@ namespace SimpleTeam.GameOne.Scene
     using GameObjID = UInt16;
     public class Simplus : GameObjBase, ISimplus
     {
-        ISimplusInfo _info;
+        private ITransformCoordinate _transform;
+        private ISimplusInfo _info;
         private Dictionary<GameObjID, ISimplusLink> _links = null;
-        private const string _pathLink = "Game/SimplusLinkPrefab";
         private GameObject _linkPrefab;
         private SimplusGraghics _simplusGraghics;
 
@@ -31,13 +31,18 @@ namespace SimpleTeam.GameOne.Scene
             }
         }
 
+        public void Initialize(ITransformCoordinate tran)
+        {
+            _transform = tran;
+        }
 
         private void Start()
         {
             _stateInfo = HelperStateInfo.None;
             _links = new Dictionary<GameObjID, ISimplusLink>();
-            _linkPrefab = Resources.Load<GameObject>(_pathLink);
-            _simplusGraghics = new SimplusGraghics(gameObject, _info);
+            const string pathLink = "Game/SimplusLinkPrefab";
+            _linkPrefab = Resources.Load<GameObject>(pathLink);
+            _simplusGraghics = new SimplusGraghics(gameObject, _info, _transform);
             _simplusGraghics.SetGraghicsActive(true);
         }
 
@@ -68,7 +73,7 @@ namespace SimpleTeam.GameOne.Scene
         public bool IsFocused(Vector2 focusPos)
         {
             if (_info == null) return false;
-            return _info.Obj2D.IsFocused(focusPos);
+            return _info.Obj2D.IsFocused(focusPos, _transform);
         }
 
         public void UpdateInfo(ISimplusInfo info)

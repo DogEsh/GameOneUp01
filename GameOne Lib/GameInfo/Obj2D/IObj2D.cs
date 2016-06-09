@@ -9,5 +9,6 @@ namespace SimpleTeam.GameOne.GameInfo
         Vector2 GetPosSurface(Vector2 destination);
 
         bool IsFocused(Vector2 pos);
+        bool IsFocused(Vector2 pos, ITransformCoordinate tran);
     }
 }

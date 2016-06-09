@@ -76,6 +76,9 @@
     <Compile Include="Assets\Scene\Containers\Case.cs" />
     <Compile Include="Assets\Scene\Containers\IMessageContainer.cs" />
     <Compile Include="Assets\Scene\Containers\MessageContainer.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Coordinates\ITransformCoordinateAll.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Coordinates\ITransformCoordinateScreen.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Coordinates\TransformCoordinateScreen.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\SimplusGraghics.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Cursor\Cursor.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Cursor\CursorGraphics.cs" />

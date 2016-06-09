@@ -9,6 +9,7 @@ namespace SimpleTeam.GameOne.Scene
 {
     public interface ISimplus : IGameObj
     {
+        void Initialize(ITransformCoordinate tran);
         void UpdateInfo(ISimplusInfo info);
         ISimplusInfo GetInfo();
         bool IsFocused(Vector2 focusPos);
