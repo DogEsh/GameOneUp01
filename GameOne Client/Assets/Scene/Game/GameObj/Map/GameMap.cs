@@ -9,8 +9,8 @@ namespace SimpleTeam.GameOne.Scene
     public class GameMap : GameObjBase, IGameMap
     {
         private IMapInfo _info;
-        private ITransformCoordinateScreen _transform;
-        private Dictionary<GameObjID, ISimplus> _simpluses = null;
+        private ITransformCoordinate _transform;
+        private Dictionary<GameObjID, ISimplus> _simpluses = new Dictionary<GameObjID, ISimplus>();
 
         private enum HelperStateInfo
         {
@@ -27,10 +27,12 @@ namespace SimpleTeam.GameOne.Scene
 
         private void Start()
         {
+
             const string _pathSimplus = "Game/SimplusPrefab";
             _simplusPrefab = Resources.Load<GameObject>(_pathSimplus);
             InitSimplus();
             UpdateSimplus();
+
         }
 
 
@@ -39,7 +41,6 @@ namespace SimpleTeam.GameOne.Scene
         {
             if (base.CheckDestroy()) return;
             if (_info == null) return;
-            _transform.Update();
             CheckInfo();
         }
 
@@ -63,16 +64,20 @@ namespace SimpleTeam.GameOne.Scene
                 }
             }
         }
+        public void Initialize(ITransformCoordinate tran)
+        {
+            _transform = tran;
+        }
         //NetworkMap
         public void InitInfo(IMapInfo info)
         {
             lock (_lockerInfo)
             {
                 _info = info;
-                _transform = new TransformCoordinateScreen(info.Coordinate);
                 _stateInfo = HelperStateInfo.Init;
             }
         }
+
         public void UpdateInfo(IMapInfo info)
         {
             lock (_lockerInfo)
@@ -118,6 +123,7 @@ namespace SimpleTeam.GameOne.Scene
         //GameManager
         public ISimplus GetFocusedSimplus(Vector2 focusPos)
         {
+            if (_simpluses == null) return null;
             foreach (ISimplus s in _simpluses.Values)
             {
                 if (s.IsFocused(focusPos))
@@ -132,6 +138,16 @@ namespace SimpleTeam.GameOne.Scene
         {
             DestroySimplus();
             Destroy(gameObject);
+        }
+
+        public IMapInfo GetInfo()
+        {
+            IMapInfo info;
+            lock (_lockerInfo)
+            {
+                info = _info;
+            }
+            return info;
         }
     }
 }

@@ -24,49 +24,24 @@ namespace SimpleTeam.GameOne.Scene
             _sceneMessages.SetMessage(message);
         }
 
+        private GameManager _gameManager;
 
         private void Start()
         {
-            IGameMap map = CreateMap();
-            map.InitInfo(CreateMapInfo());
-            _sceneMessages = new SceneClientGameMessages(map);
+            _gameManager = CreateGameManager(_sceneScenario.GetScenario());
+            _sceneMessages = new SceneClientGameMessages(_gameManager);
 
-            CreateGameManager(map, _sceneScenario.GetScenario());
+            
         }
-        private IGameMap CreateMap()
-        {
-            const string path = "Game/GameMapPrefab";
-            GameObject prefab = Resources.Load<GameObject>(path);
-            GameObject inst = Instantiate(prefab);
-            inst.transform.parent = gameObject.transform;
-            return inst.GetComponent<GameMap>();
-        }
+       
 
         private void Update()
         {
         }
 
-        public IMapInfo CreateMapInfo()
-        {
-            ISimplusInfo simplus;
-            Circle circle;
-            ISimplusHP simplusHp;
-            IParty party;
-            ILinkInfoContainer linkContainer;
-            IGameObjContainer<ISimplusInfo> mySimplus;
+        
 
-            linkContainer = new LinkInfoList();
-            party = new Party(5);
-            simplusHp = new SimplusHP(10, 100, 10);
-            circle = new Circle(new Vector2(0, 0), 0.1f);
-            simplus = new SimplusInfo(1, circle, simplusHp, party, linkContainer);
-            mySimplus = new GameObjList<ISimplusInfo>();
-            mySimplus.SetObj(simplus);
-            IMapInfo mapInfo = new MapInfo(16, 9, mySimplus);
-            return mapInfo;
-        }
-
-        public GameManager CreateGameManager(IGameMap map, IScenario scenario)
+        public GameManager CreateGameManager(IScenario scenario)
         {
             GameManager gameManager;
             const string path = "Game/GameManagerPrefab";
@@ -74,7 +49,7 @@ namespace SimpleTeam.GameOne.Scene
             GameObject inst = Instantiate(prefab);
             inst.transform.parent = gameObject.transform;
             gameManager = inst.GetComponent<GameManager>();
-            gameManager.Initialize(map, scenario);
+            gameManager.Initialize(scenario);
             return gameManager;
         }
     }

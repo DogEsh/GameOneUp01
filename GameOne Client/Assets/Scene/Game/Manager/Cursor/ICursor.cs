@@ -8,5 +8,6 @@ namespace SimpleTeam.GameOne.Scene
         Vector2 GetSource();
         Vector2 GetDestination();
         void SetMouse(IMouseManager mouse);
+        void Initialize(ITransformCoordinate tran);
     }
 }

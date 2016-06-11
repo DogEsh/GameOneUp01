@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\Simplus.cs" />
     <Compile Include="Assets\Scene\Game\Handler\MessageHandlerClientGameMap.cs" />
     <Compile Include="Assets\Scene\Game\Handler\MessageHandlerClientGameState.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\IGameManager.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Link\Destroyer\LinkManagerDestroyer.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Link\ILinkManager.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Link\LinkManager.cs" />

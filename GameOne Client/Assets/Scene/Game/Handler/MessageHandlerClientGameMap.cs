@@ -9,7 +9,7 @@ namespace SimpleTeam.GameOne.Scene
 
     class MessageHandlerClientGameMap : IMessageHandler
     {
-        IGameMap _map;
+        IGameManager _manager;
 
         public MessageID Type
         {
@@ -18,9 +18,9 @@ namespace SimpleTeam.GameOne.Scene
                 return (MessageID)HelperMessageID.GameMap;
             }
         }
-        public MessageHandlerClientGameMap(IGameMap map)
+        public MessageHandlerClientGameMap(IGameManager manager)
         {
-            _map = map;
+            _manager = manager;
         }
 
         public void SetMessage(IMessage message)
@@ -28,11 +28,11 @@ namespace SimpleTeam.GameOne.Scene
             MessageDataGameMap data = message as IMessageData as MessageDataGameMap;
             if (data.State == MessageDataGameMap.HelperState.Init)
             {
-                _map.InitInfo(data.Map);
+                _manager.GetMap().InitInfo(data.Map);
             }
             else if (data.State == MessageDataGameMap.HelperState.Update)
             {
-                _map.UpdateInfo(data.Map);
+                _manager.GetMap().UpdateInfo(data.Map);
             }
         }
     }

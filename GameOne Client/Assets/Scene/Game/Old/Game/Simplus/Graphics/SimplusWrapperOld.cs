@@ -64,6 +64,11 @@ namespace SimpleTeam.GameOne.Scene
             throw new NotImplementedException();
         }
 
+        public Vector2 GetPosSurface(Vector2 destination, ITransformCoordinate tran)
+        {
+            throw new NotImplementedException();
+        }
+
         //public Vector2 GetPos()
         //{
         //    V = _obj.transform.position;

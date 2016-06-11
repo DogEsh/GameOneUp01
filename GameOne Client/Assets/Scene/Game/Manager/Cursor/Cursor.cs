@@ -10,7 +10,8 @@ namespace SimpleTeam.GameOne.Scene
     class Cursor : MonoBehaviour, ICursor
     {
         private CursorGraphics _cursorGraghics;
-        DragInfo _dragInfo = new DragInfo();
+        private ITransformCoordinate _transform;
+        DragInfo _dragInfo;
         
         public Vector2 GetSource()
         {
@@ -34,7 +35,7 @@ namespace SimpleTeam.GameOne.Scene
         {
             ISimplus s = mouse.FocusSimplus;
             IObj2D obj;
-            if (s == null) obj = new Point(mouse.Pos);
+            if (s == null) obj = new Point(_transform.UntransformPos(mouse.Pos));
             else obj = s.GetInfo().Obj2D;
 
 
@@ -53,6 +54,12 @@ namespace SimpleTeam.GameOne.Scene
             {
                 _cursorGraghics.SetGraghicsActive(false);
             }
+        }
+
+        public void Initialize(ITransformCoordinate tran)
+        {
+            _transform = tran;
+            _dragInfo = new DragInfo(tran);
         }
     }
 }

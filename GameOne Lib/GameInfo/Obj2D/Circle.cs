@@ -67,6 +67,14 @@ namespace SimpleTeam.GameOne.GameInfo
             }
             return false;
         }
+
+        public Vector2 GetPosSurface(Vector2 destination, ITransformCoordinate tran)
+        {
+            Vector2 p = tran.TransformPos(_pos);
+            Vector2 v = destination - p;
+            v = v.normalized;
+            return p + v * tran.Size*_radius;
+        }
     }
 }
 
