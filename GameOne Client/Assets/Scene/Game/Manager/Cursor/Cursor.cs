@@ -12,6 +12,7 @@ namespace SimpleTeam.GameOne.Scene
         private CursorGraphics _cursorGraghics;
         private ITransformCoordinate _transform;
         DragInfo _dragInfo;
+        private SimplusAnimationManager _simplusManager;
         
         public Vector2 GetSource()
         {
@@ -33,10 +34,14 @@ namespace SimpleTeam.GameOne.Scene
 
         public void SetMouse(IMouseManager mouse)
         {
-            ISimplus s = mouse.FocusSimplus;
+            GameObject inst = mouse.FocusSimplus;
             IObj2D obj;
-            if (s == null) obj = new Point(_transform.UntransformPos(mouse.Pos));
-            else obj = s.GetInfo().Obj2D;
+            if (inst == null) obj = new Point(_transform.UntransformPos(mouse.Pos));
+            else
+            {
+                ISimplus s = inst.GetComponent<ISimplus>();
+                obj = s.GetInfo().Obj2D;
+            }
 
 
             if (HelperMouseState.Down == mouse.State.Get())

@@ -5,13 +5,13 @@ using System.Text;
 
 namespace SimpleTeam.GameOne.GameInfo
 {
-    using GameID = UInt16;
+    using GameObjID = UInt16;
     public class SimplusLinkInfo : ISimplusLinkInfo
     {
-        private GameID _id;
+        private GameObjID _id;
 
-        private SimplusInfo _source;
-        private SimplusInfo _destination;
+        private ISimplusInfo _source;
+        private ISimplusInfo _destination;
 
         private IObj2D _current;
         private IObj2D _lost;
@@ -19,7 +19,7 @@ namespace SimpleTeam.GameOne.GameInfo
         private SimplusLinkActionState _state;
 
 
-        public SimplusInfo Source
+        public ISimplusInfo Source
         {
             get
             {
@@ -32,7 +32,7 @@ namespace SimpleTeam.GameOne.GameInfo
             }
         }
 
-        public SimplusInfo Destination
+        public ISimplusInfo Destination
         {
             get
             {
@@ -84,7 +84,7 @@ namespace SimpleTeam.GameOne.GameInfo
             }
         }
 
-        public GameID ID
+        public GameObjID ID
         {
             get
             {

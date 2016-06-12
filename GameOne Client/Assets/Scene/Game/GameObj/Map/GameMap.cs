@@ -10,7 +10,7 @@ namespace SimpleTeam.GameOne.Scene
     {
         private IMapInfo _info;
         private ITransformCoordinate _transform;
-        private Dictionary<GameObjID, ISimplus> _simpluses = new Dictionary<GameObjID, ISimplus>();
+        private Dictionary<GameObjID, GameObject> _simpluses = new Dictionary<GameObjID, GameObject>();
 
         private enum HelperStateInfo
         {
@@ -91,12 +91,12 @@ namespace SimpleTeam.GameOne.Scene
         {
             foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
-                _simpluses[s.ID].UpdateInfo(s);
+                _simpluses[s.ID].GetComponent<ISimplus>().UpdateInfo(s);
             }
         }
         private void InitSimplus()
         {
-            _simpluses = new Dictionary<GameObjID, ISimplus>();
+            _simpluses = new Dictionary<GameObjID, GameObject>();
             if (_info == null) return;
             foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
@@ -105,7 +105,7 @@ namespace SimpleTeam.GameOne.Scene
                 
                 ISimplus simplus = inst.GetComponent<ISimplus>();
                 simplus.Initialize(_transform);
-                _simpluses.Add(s.ID, simplus);
+                _simpluses.Add(s.ID, inst);
 
                 
             }
@@ -114,8 +114,9 @@ namespace SimpleTeam.GameOne.Scene
         {
             if (_simpluses != null)
             {
-                foreach (ISimplus s in _simpluses.Values)
+                foreach (GameObject inst in _simpluses.Values)
                 {
+                    ISimplus s = inst.GetComponent<ISimplus>();
                     s.RequestDestroy();
                 }
                 _simpluses = null;
@@ -124,14 +125,15 @@ namespace SimpleTeam.GameOne.Scene
 
 
         //GameManager
-        public ISimplus GetFocusedSimplus(Vector2 focusPos)
+        public GameObject GetFocusedSimplus(Vector2 focusPos)
         {
             if (_simpluses == null) return null;
-            foreach (ISimplus s in _simpluses.Values)
+            foreach (GameObject inst in _simpluses.Values)
             {
+                ISimplus s = inst.GetComponent<ISimplus>();
                 if (s.IsFocused(focusPos))
                 {
-                    return s;
+                    return inst;
                 }
             }
             return null;

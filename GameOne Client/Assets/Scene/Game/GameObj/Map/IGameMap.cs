@@ -10,7 +10,7 @@ namespace SimpleTeam.GameOne.Scene
     {
         void InitInfo(IMapInfo info);
         void UpdateInfo(IMapInfo info);
-        ISimplus GetFocusedSimplus(Vector2 focusPos);
+        GameObject GetFocusedSimplus(Vector2 focusPos);
         IMapInfo GetInfo();
         void Initialize(ITransformCoordinate tran);
     }

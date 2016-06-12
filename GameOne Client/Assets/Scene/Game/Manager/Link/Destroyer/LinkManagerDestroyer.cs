@@ -63,7 +63,7 @@ namespace SimpleTeam.GameOne.Scene
         public void SetMouse(IMouseManager mouse)
         {
             HelperMouseState state = mouse.State.Get();
-            ISimplus focus = mouse.FocusSimplus;
+            GameObject focus = mouse.FocusSimplus;
             Vector2 pos = mouse.Pos;
 
             if (HelperMouseState.Down == state && focus == null)

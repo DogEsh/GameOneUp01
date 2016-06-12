@@ -79,7 +79,14 @@
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\ITransformCoordinateAll.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\ITransformCoordinateScreen.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\TransformCoordinateScreen.cs" />
-    <Compile Include="Assets\Scene\Game\GameObj\Simplus\SimplusGraghics.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\Graphics\ISimplusGraphics.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\Handler\ISimplusHandler.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\Handler\SimplusHandler.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\SimplusAnimation\ISimplusAnimationManager.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\Animation\ISimplusAnimationState.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\SimplusAnimation\SimplusAnimationManager.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\Animation\SimplusAnimationState.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\Graphics\SimplusGraphics.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Cursor\Cursor.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Cursor\CursorGraphics.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Cursor\ICursor.cs" />
@@ -99,9 +106,9 @@
     <Compile Include="Assets\Scene\Game\Manager\Link\ILinkManager.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Link\LinkManager.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Link\Creator\LinkManagerCreator.cs" />
-    <Compile Include="Assets\Scene\Game\Manager\Mouse\IMouseButtonState.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Mouse\Button\IMouseButtonState.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Mouse\IMouseManager.cs" />
-    <Compile Include="Assets\Scene\Game\Manager\Mouse\MouseButtonState.cs" />
+    <Compile Include="Assets\Scene\Game\Manager\Mouse\Button\MouseButtonState.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Mouse\MouseManager.cs" />
     <Compile Include="Assets\Scene\Game\Old\Game\Link\SimplusLinkOld.cs" />
     <Compile Include="Assets\Scene\Game\Old\Game\Link\SimplusLinkWrapperOld.cs" />

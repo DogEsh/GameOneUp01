@@ -20,7 +20,7 @@ namespace SimpleTeam.GameOne.Scene
             if (SimplusActionStateOld.Focused == state)
                 StartAnimation("Focused");
             if (SimplusActionStateOld.Passive == state)
-                StartAnimation("Passived");
+                StartAnimation("Idle");
             if (SimplusActionStateOld.Pressed== state)
                 StartAnimation("Pressed");
         }

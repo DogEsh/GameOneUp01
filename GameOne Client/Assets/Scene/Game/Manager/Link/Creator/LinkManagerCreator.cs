@@ -3,8 +3,7 @@ using SimpleTeam.GameOne.Message;
 using SimpleTeam.Command.Scenario;
 using SimpleTeam.Command;
 using SimpleTeam.GameOne.Command;
-using System;
-
+using UnityEngine;
 namespace SimpleTeam.GameOne.Scene
 {
     class LinkManagerCreator : ILinkManager
@@ -51,7 +50,10 @@ namespace SimpleTeam.GameOne.Scene
         public void SetMouse(IMouseManager mouse)
         {
             HelperMouseState state = mouse.State.Get();
-            ISimplus focus = mouse.FocusSimplus;
+            ISimplus focus;
+            GameObject inst = mouse.FocusSimplus;
+            if (inst == null) focus = null;
+            else focus = inst.GetComponent<ISimplus>();
 
             if (HelperMouseState.Down == state)
             {

@@ -10,7 +10,7 @@ namespace SimpleTeam.GameOne.Scene
         MouseManager _mouse;
         
         LinkManager _linkManager;
-
+        ISimplusAnimationManager _animationSimplus;
         IGameMap _map;
         IScenario _scenario;
         private ITransformCoordinateScreen _transform;
@@ -24,6 +24,7 @@ namespace SimpleTeam.GameOne.Scene
             _mouse = new MouseManager();
             _linkManager = new LinkManager(_scenario);
             CreateCursor();
+            _animationSimplus = new SimplusAnimationManager();
         }
         private void CreateCursor()
         {
@@ -44,6 +45,7 @@ namespace SimpleTeam.GameOne.Scene
             _mouse.FocusSimplus = _map.GetFocusedSimplus(_mouse.Pos);
             _cursor.SetMouse(_mouse);
             _transform.Update();
+            _animationSimplus.SetMouse(_mouse);
         }
 
         public IGameMap GetMap()
