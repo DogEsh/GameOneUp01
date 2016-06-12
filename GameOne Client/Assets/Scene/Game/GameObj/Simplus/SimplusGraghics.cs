@@ -7,20 +7,21 @@ using UnityEngine;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    public class SimplusGraghics
+    public class SimplusGraghics : MonoBehaviour
     {
         private ITransformCoordinate _transform;
         private ISimplusInfo _info;
         private GameObject _mySimplus;
         private Sprite _simplusSprite;
-        public SimplusGraghics(GameObject mySimplus, ISimplusInfo info, ITransformCoordinate tran)
+        public void Initialize(GameObject mySimplus, ISimplusInfo info, ITransformCoordinate tran)
         {
             _transform = tran;
             _mySimplus = mySimplus;
             _mySimplus.AddComponent<SpriteRenderer>();
 
+            //Texture2D texture = Resources.Load<Texture2D>("Menu/Textures/GameBackground");
+            //Rect rect = new Rect(0, 0, texture.width, texture.height);
 
-           
 
             Texture2D texture = Resources.Load<Texture2D>("Game/Textures/TextureSimpluses");
             Rect rect = new Rect(texture.width / 4 * (info.ID % 4), 0, texture.width / 4, texture.height);
@@ -28,30 +29,25 @@ namespace SimpleTeam.GameOne.Scene
             
 
             _simplusSprite = Sprite.Create(texture, rect, center);
-            _mySimplus.GetComponent<SpriteRenderer>().sprite = _simplusSprite;
+            //_mySimplus.GetComponent<SpriteRenderer>().sprite = _simplusSprite;
             _info = info;
         }
 
-        public void UpdateGraghics()
+        private void Update()
         {
-            float pixelsPerUnit = _mySimplus.GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
-            float width = _mySimplus.GetComponent<SpriteRenderer>().sprite.rect.width;
-            Vector2 v = _mySimplus.GetComponent<SpriteRenderer>().sprite.rect.size;
-            v = Camera.main.ScreenToWorldPoint(v/2);
-            float f = v.magnitude;
-           
+            float pixelsPerUnit = gameObject.GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
+            float width = gameObject.GetComponent<SpriteRenderer>().sprite.rect.width;
+            float height = gameObject.GetComponent<SpriteRenderer>().sprite.rect.height;
 
-            float scaleNumber = _transform.Size * 2*_info.Obj2D.Radius * pixelsPerUnit / width;
-            Vector2 p = _transform.TransformPos(_info.Obj2D.Pos);
-            Vector3 _position = new Vector3(p.x, p.y,  0f);
-            Vector3 _scale = new Vector3(scaleNumber, scaleNumber, 0f);
-            _mySimplus.transform.position = _position;
-            _mySimplus.transform.localScale = _scale;
-        }
+            Vector3 scale = _mySimplus.transform.localScale;
+            scale.x = _transform.Size * 2 * _info.Obj2D.Radius * pixelsPerUnit / width;
+            scale.y = _transform.Size * 2 * _info.Obj2D.Radius * pixelsPerUnit / height;
+            _mySimplus.transform.localScale = scale;
 
-        public void SetGraghicsActive(bool activity)
-        {
-            _mySimplus.SetActive(activity);
+            Vector3 p = _transform.TransformPos(_info.Obj2D.Pos);
+            p.z = _mySimplus.transform.position.z;
+            _mySimplus.transform.position = p;
+            
         }
     }
 }

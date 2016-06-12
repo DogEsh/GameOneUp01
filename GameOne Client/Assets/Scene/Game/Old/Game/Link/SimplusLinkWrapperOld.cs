@@ -40,7 +40,6 @@ namespace SimpleTeam.GameOne.Scene
 
         private List<GameObject> _partusContainer;
 
-        private SpriteRenderer _sprRenderer;
         private float _pixelsPerUnit;
         private float _width;
         private Sprite LinkSprite;

@@ -102,9 +102,12 @@ namespace SimpleTeam.GameOne.Scene
             {
                 GameObject inst = Instantiate(_simplusPrefab);
                 inst.transform.parent = gameObject.transform;
+                
                 ISimplus simplus = inst.GetComponent<ISimplus>();
                 simplus.Initialize(_transform);
                 _simpluses.Add(s.ID, simplus);
+
+                
             }
         }
         private void DestroySimplus()

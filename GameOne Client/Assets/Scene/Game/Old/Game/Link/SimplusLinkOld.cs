@@ -29,6 +29,10 @@ namespace SimpleTeam.GameOne.Scene
             //_wrap = new SimplusLinkWrapper(s, d);
             _wrap.SetAnimationState(SimplusLinkActionState.Flying);
             _wrap.SetSimplusLinkWrapperData(s, d);
+
+            //wtf
+            if (_state == SimplusLinkActionState.Transporting)
+            _state = SimplusLinkActionState.Transporting;
         }
 
         //rm

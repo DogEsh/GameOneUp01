@@ -13,7 +13,7 @@ namespace SimpleTeam.GameOne.Scene
         {
             get
             {
-                return 2*_screenPos.x;
+                return _screenPos.x;
             }
         }
 

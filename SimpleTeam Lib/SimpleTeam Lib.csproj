@@ -65,6 +65,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System\Bitfield.cs" />
     <Compile Include="Message\IMessageID.cs" />
+    <Compile Include="System\ConcurrentSingle.cs" />
+    <Compile Include="System\IConcurrentSingle.cs" />
     <Compile Include="System\StateMachine.cs" />
     <Compile Include="User\IUserNetwork.cs" />
     <Compile Include="User\IUserProfile.cs" />

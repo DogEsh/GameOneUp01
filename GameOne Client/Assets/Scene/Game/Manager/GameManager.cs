@@ -72,7 +72,7 @@ namespace SimpleTeam.GameOne.Scene
             linkContainer = new LinkInfoList();
             party = new Party(5);
             simplusHp = new SimplusHP(10, 100, 10);
-            circle = new Circle(new Vector2(0f, 0f), 0.25f);
+            circle = new Circle(new Vector2(0f, 0f), 0.1f);
             simplus = new SimplusInfo(1, circle, simplusHp, party, linkContainer);
             mySimplus = new GameObjList<ISimplusInfo>();
             mySimplus.SetObj(simplus);

@@ -13,8 +13,8 @@ namespace SimpleTeam.GameOne.Scene
     class GameManagerOld : MonoBehaviour
     {
         private MouseManagerOld _mouse = new MouseManagerOld();
-        public LinkManagerOld _linkManager;
-        public GameMapOld _map;
+        public LinkManagerOld _linkManager = new LinkManagerOld();
+        public GameMapOld _map = new GameMapOld();
 
         public void UpdateLink()
         {
