@@ -1,13 +1,14 @@
 ﻿using System;
 using SimpleTeam.GameOne.GameInfo;
+using UnityEngine;
 
 namespace SimpleTeam.GameOne.Scene
 {
     using GameObjID = UInt16;
-    class SimplusLink : GameObjBase, ISimplusLink
+    class SimplusLink : MonoBehaviour, ISimplusLink
     {
         ISimplusLinkInfo _info;
-        public override GameObjID ID
+        public GameObjID ID
         {
             get
             {
@@ -18,10 +19,6 @@ namespace SimpleTeam.GameOne.Scene
         public void UpdateInfo(ISimplusLinkInfo info)
         {
             _info = info;
-        }
-        public override void Destroy()
-        {
-            Destroy(gameObject);
         }
     }
 }

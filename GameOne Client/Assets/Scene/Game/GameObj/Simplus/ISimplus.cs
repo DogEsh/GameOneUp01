@@ -7,10 +7,9 @@ using UnityEngine;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    public interface ISimplus : IGameObj
+    public interface ISimplus : IGameObjID
     {
         void Initialize(ITransformCoordinate tran);
-        void UpdateInfo(ISimplusInfo info);
         ISimplusInfo GetInfo();
         bool IsFocused(Vector2 focusPos);
     }

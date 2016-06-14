@@ -62,24 +62,31 @@ namespace SimpleTeam.GameOne.Scene
             _map.Initialize(_transform);
             _map.InitInfo(mapInfo);
         }
+
         private IMapInfo CreateMapInfo()
+        {
+            IGameObjContainer<ISimplusInfo> mySimplus;
+            
+            mySimplus = new GameObjList<ISimplusInfo>();
+            mySimplus.SetObj(CreateSimlusInfo(0f, 0f, 0.1f));
+            //mySimplus.SetObj(CreateSimlusInfo(0.3f, 0f, 0.1f));
+            IMapInfo mapInfo = new MapInfo(16, 9, mySimplus);
+            return mapInfo;
+        }
+        private ISimplusInfo CreateSimlusInfo(float posX, float posY, float radius)
         {
             ISimplusInfo simplus;
             Circle circle;
             ISimplusHP simplusHp;
             IParty party;
             ILinkInfoContainer linkContainer;
-            IGameObjContainer<ISimplusInfo> mySimplus;
 
             linkContainer = new LinkInfoList();
             party = new Party(5);
             simplusHp = new SimplusHP(10, 100, 10);
-            circle = new Circle(new Vector2(0f, 0f), 0.1f);
+            circle = new Circle(new Vector2(posX, posY), radius);
             simplus = new SimplusInfo(1, circle, simplusHp, party, linkContainer);
-            mySimplus = new GameObjList<ISimplusInfo>();
-            mySimplus.SetObj(simplus);
-            IMapInfo mapInfo = new MapInfo(16, 9, mySimplus);
-            return mapInfo;
+            return simplus;
         }
     }
 }

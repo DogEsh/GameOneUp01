@@ -91,8 +91,6 @@
     <Compile Include="Assets\Scene\Game\Manager\Cursor\CursorGraphics.cs" />
     <Compile Include="Assets\Scene\Game\Manager\Cursor\ICursor.cs" />
     <Compile Include="Assets\Scene\Game\Manager\GameManager.cs" />
-    <Compile Include="Assets\Scene\Game\GameObj\GameObjBase.cs" />
-    <Compile Include="Assets\Scene\Game\GameObj\IGameObj.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Map\GameMap.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\SimplusLink\ISimplusLink.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\SimplusLink\SimplusLink.cs" />

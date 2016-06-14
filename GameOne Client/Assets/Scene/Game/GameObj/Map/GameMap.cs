@@ -6,7 +6,7 @@ namespace SimpleTeam.GameOne.Scene
 {
    
     using GameObjID = UInt16;
-    public class GameMap : GameObjBase, IGameMap
+    public class GameMap : MonoBehaviour, IGameMap
     {
         private IMapInfo _info;
         private ITransformCoordinate _transform;
@@ -23,7 +23,7 @@ namespace SimpleTeam.GameOne.Scene
 
         private GameObject _simplusPrefab;
 
-        public override GameObjID ID{ get { return 0; } }
+        public GameObjID ID{ get { return 0; } }
 
         private void Start()
         {
@@ -39,7 +39,6 @@ namespace SimpleTeam.GameOne.Scene
 
         private void Update()
         {
-            if (base.CheckDestroy()) return;
             if (_info == null) return;
             CheckInfo();
         }
@@ -91,7 +90,7 @@ namespace SimpleTeam.GameOne.Scene
         {
             foreach (ISimplusInfo s in _info.GetContainerSimplus())
             {
-                _simpluses[s.ID].GetComponent<ISimplus>().UpdateInfo(s);
+                _simpluses[s.ID].GetComponentInChildren<ISimplusHandler>().SetInfo(s);
             }
         }
         private void InitSimplus()
@@ -110,18 +109,6 @@ namespace SimpleTeam.GameOne.Scene
                 
             }
         }
-        private void DestroySimplus()
-        {
-            if (_simpluses != null)
-            {
-                foreach (GameObject inst in _simpluses.Values)
-                {
-                    ISimplus s = inst.GetComponent<ISimplus>();
-                    s.RequestDestroy();
-                }
-                _simpluses = null;
-            }
-        }
 
 
         //GameManager
@@ -138,11 +125,12 @@ namespace SimpleTeam.GameOne.Scene
             }
             return null;
         }
-
-        public override void Destroy()
+        private void DestroySimplus()
         {
-            DestroySimplus();
-            Destroy(gameObject);
+            foreach (GameObject inst in _simpluses.Values)
+            {
+                Destroy(inst);
+            }
         }
 
         public IMapInfo GetInfo()

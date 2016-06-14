@@ -8,7 +8,7 @@ namespace SimpleTeam.GameOne.Scene
     using GameObjID = UInt16;
     class SimplusHandler : MonoBehaviour, ISimplusHandler
     {
-        private Dictionary<GameObjID, ISimplusLink> _links;
+        private Dictionary<GameObjID, SimplusLink> _links;
         GameObject _mySimplus;
         private GameObject _linkPrefab;
 
@@ -25,6 +25,7 @@ namespace SimpleTeam.GameOne.Scene
         
         private void Start()
         {
+            _links = new Dictionary<GameObjID, SimplusLink>();
             _stateInfo = HelperStateInfo.None;
             _mySimplus = gameObject.transform.parent.gameObject;
             const string pathLink = "Game/SimplusLinkPrefab";
@@ -63,7 +64,7 @@ namespace SimpleTeam.GameOne.Scene
                 {
                     GameObject inst = Instantiate(_linkPrefab);
                     inst.transform.parent = gameObject.transform;
-                    ISimplusLink link = inst.GetComponent<ISimplusLink>();
+                    SimplusLink link = inst.GetComponent<SimplusLink>();
                     _links.Add(inf.ID, link);
                 }
             }
@@ -75,7 +76,7 @@ namespace SimpleTeam.GameOne.Scene
                 ISimplusLinkInfo tmp = _info.Links.GetObj(id);
                 if (tmp == null)
                 {
-                    _links[id].RequestDestroy();
+                    Destroy(_links[id].gameObject);
                     _links.Remove(id);
                 }
             }
@@ -88,11 +89,14 @@ namespace SimpleTeam.GameOne.Scene
             }
         }
 
-        public void Initialize(Dictionary<ushort, ISimplusLink> links)
+        public void DestroyLinks()
         {
-            _links = links;
+            foreach (GameObjID id in _links.Keys)
+            {
+                Destroy(_links[id]);
+            }
+            _links = null;
         }
-
         public ISimplusInfo GetInfo()
         {
             ISimplusInfo i;

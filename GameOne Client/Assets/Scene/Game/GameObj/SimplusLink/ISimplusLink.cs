@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    interface ISimplusLink : IGameObj
+    interface ISimplusLink : IGameObjID
     {
         void UpdateInfo(ISimplusLinkInfo info);
     }

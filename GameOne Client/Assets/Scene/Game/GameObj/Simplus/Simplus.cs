@@ -8,14 +8,12 @@ using UnityEngine;
 namespace SimpleTeam.GameOne.Scene
 {
     using GameObjID = UInt16;
-    public class Simplus : GameObjBase, ISimplus
+    public class Simplus : MonoBehaviour, ISimplus
     {
         private ITransformCoordinate _transform;
-        private Dictionary<GameObjID, ISimplusLink> _links = null;
-        //private SimplusGraghics _simplusGraghics;
 
 
-        public override GameObjID ID
+        public  GameObjID ID
         {
             get
             {
@@ -31,11 +29,9 @@ namespace SimpleTeam.GameOne.Scene
         }
 
         private void Start()
-        {
-            _links = new Dictionary<GameObjID, ISimplusLink>();
+        { 
 
             ISimplusHandler handler = gameObject.GetComponentInChildren<ISimplusHandler>();
-            handler.Initialize(_links);
 
             ISimplusInfo info = handler.GetInfo();
             ISimplusGraphics graph = gameObject.GetComponentInChildren<ISimplusGraphics>();
@@ -45,7 +41,6 @@ namespace SimpleTeam.GameOne.Scene
 
         private void Update()
         {
-            if (base.CheckDestroy()) return;
         }
 
         public bool IsFocused(Vector2 focusPos)
@@ -57,33 +52,10 @@ namespace SimpleTeam.GameOne.Scene
         }
 
 
-
-        public void DestroyLinks()
-        {
-            foreach (GameObjID id in _links.Keys)
-            {
-                _links[id].RequestDestroy();
-            }
-            _links = null;
-        }
-
-        public override void Destroy()
-        {
-            DestroyLinks();
-            
-            Destroy(gameObject);
-        }
-
         public ISimplusInfo GetInfo()
         {
             ISimplusHandler handler = gameObject.GetComponentInChildren<ISimplusHandler>();
             return handler.GetInfo();
-        }
-
-        public void UpdateInfo(ISimplusInfo info)
-        {
-            ISimplusHandler handler = gameObject.GetComponentInChildren<ISimplusHandler>();
-            handler.SetInfo(info);
         }
     }
 }
