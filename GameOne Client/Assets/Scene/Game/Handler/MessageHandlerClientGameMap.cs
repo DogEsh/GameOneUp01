@@ -2,6 +2,7 @@
 using SimpleTeam.GameOne.Message;
 using SimpleTeam.Command.Scenario;
 using SimpleTeam.Message;
+using SimpleTeam.GameOne.GameInfo;
 
 namespace SimpleTeam.GameOne.Scene
 {
@@ -26,13 +27,14 @@ namespace SimpleTeam.GameOne.Scene
         public void SetMessage(IMessage message)
         {
             MessageDataGameMap data = message as IMessageData as MessageDataGameMap;
+            IGameMapHandler handler = _manager.GetMap().GetComponentInChildren<IGameMapHandler>();
             if (data.State == MessageDataGameMap.HelperState.Init)
             {
-                _manager.GetMap().InitInfo(data.Map);
+                handler.SetToInitInfo(data.Map);
             }
             else if (data.State == MessageDataGameMap.HelperState.Update)
             {
-                _manager.GetMap().UpdateInfo(data.Map);
+                handler.SetToUpdateInfo(data.Map);
             }
         }
     }

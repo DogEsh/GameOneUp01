@@ -7,6 +7,6 @@ namespace SimpleTeam.GameOne.Scene
 {
     interface IGameManager
     {
-        IGameMap GetMap();
+        GameMap GetMap();
     }
 }

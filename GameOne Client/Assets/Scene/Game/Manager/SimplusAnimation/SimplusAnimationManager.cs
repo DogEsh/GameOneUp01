@@ -10,17 +10,17 @@ namespace SimpleTeam.GameOne.Scene
 
         public void SetMouse(IMouseManager mouse)
         {
-            GameObject inst = mouse.FocusSimplus;
-            ISimplusGraphics s;
-            if (inst == null) s = null;
+            Simplus s = mouse.FocusSimplus;
+            ISimplusGraphics graphics;
+            if (s == null) graphics = null;
             else
             {
-                s = inst.GetComponentInChildren<ISimplusGraphics>();
+                graphics = s.GetComponentInChildren<ISimplusGraphics>();
             }
 
-            Refocus(s);
+            Refocus(graphics);
 
-            Repress(s, mouse.State.Get());
+            Repress(graphics, mouse.State.Get());
         }
         private void Refocus(ISimplusGraphics focus)
         {

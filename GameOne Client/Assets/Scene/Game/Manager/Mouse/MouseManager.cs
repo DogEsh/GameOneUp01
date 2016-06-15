@@ -7,7 +7,7 @@ namespace SimpleTeam.GameOne.Scene
     {
         public Vector2 _pos;
         public MouseButtonState _state = new MouseButtonState();
-        private GameObject _focusSimplus;
+        private Simplus _focusSimplus;
 
         public Vector2 Pos
         {
@@ -25,7 +25,7 @@ namespace SimpleTeam.GameOne.Scene
             }
            
         }
-        public GameObject FocusSimplus
+        public Simplus FocusSimplus
         {
             get
             {

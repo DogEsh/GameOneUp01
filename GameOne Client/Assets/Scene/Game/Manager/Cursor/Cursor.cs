@@ -34,12 +34,11 @@ namespace SimpleTeam.GameOne.Scene
 
         public void SetMouse(IMouseManager mouse)
         {
-            GameObject inst = mouse.FocusSimplus;
+            ISimplus s = mouse.FocusSimplus;
             IObj2D obj;
-            if (inst == null) obj = new Point(_transform.UntransformPos(mouse.Pos));
+            if (s == null) obj = new Point(_transform.UntransformPos(mouse.Pos));
             else
             {
-                ISimplus s = inst.GetComponent<ISimplus>();
                 obj = s.GetInfo().Obj2D;
             }
 

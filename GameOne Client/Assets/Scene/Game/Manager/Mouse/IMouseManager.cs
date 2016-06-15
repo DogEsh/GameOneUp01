@@ -7,7 +7,7 @@ namespace SimpleTeam.GameOne.Scene
     {
         Vector2 Pos { get; }
         IMouseButtonState State { get; }
-        GameObject FocusSimplus { get; }
+        Simplus FocusSimplus { get; }
         void Update();
     }
 }

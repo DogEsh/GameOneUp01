@@ -82,6 +82,9 @@
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\ITransformCoordinateAll.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\ITransformCoordinateScreen.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\TransformCoordinateScreen.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\IGameObj.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Map\Handler\GameMapHandler.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Map\Handler\IGameMapHandler.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\Animation\RegisterSimplusAnimationState.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\Graphics\ISimplusGraphics.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\Handler\ISimplusHandler.cs" />

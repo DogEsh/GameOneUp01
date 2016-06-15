@@ -8,10 +8,9 @@ namespace SimpleTeam.GameOne.Scene
 {
     public interface IGameMap : IGameObjID
     {
-        void InitInfo(IMapInfo info);
-        void UpdateInfo(IMapInfo info);
-        GameObject GetFocusedSimplus(Vector2 focusPos);
         IMapInfo GetInfo();
+        Simplus GetFocusedSimplus(Vector2 focusPos);
+        ITransformCoordinate GetTransform();
         void Initialize(ITransformCoordinate tran);
     }
 }

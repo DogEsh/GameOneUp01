@@ -8,8 +8,8 @@ namespace SimpleTeam.GameOne.Scene
     using GameObjID = UInt16;
     interface ISimplusHandler
     {
-        void SetInfo(ISimplusInfo info);
-        ISimplusInfo GetInfo(bool flagReset = false);
-        void DestroyLinks();
+        void SetToUpdateInfo(ISimplusInfo info);
+        ISimplusInfo GetInfo();
+
     }
 }

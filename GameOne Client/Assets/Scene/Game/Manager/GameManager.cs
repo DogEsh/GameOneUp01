@@ -11,7 +11,7 @@ namespace SimpleTeam.GameOne.Scene
         
         LinkManager _linkManager;
         ISimplusAnimationManager _animationSimplus;
-        IGameMap _map;
+        GameMap _map;
         IScenario _scenario;
         private ITransformCoordinateScreen _transform;
 
@@ -42,13 +42,14 @@ namespace SimpleTeam.GameOne.Scene
         private void Update()
         {
             _mouse.Update();
+            Simplus s = _map.GetFocusedSimplus(_mouse.Pos);
             _mouse.FocusSimplus = _map.GetFocusedSimplus(_mouse.Pos);
             _cursor.SetMouse(_mouse);
             _transform.Update();
             _animationSimplus.SetMouse(_mouse);
         }
 
-        public IGameMap GetMap()
+        public GameMap GetMap()
         {
             return _map;
         }
@@ -60,7 +61,7 @@ namespace SimpleTeam.GameOne.Scene
             inst.transform.parent = gameObject.transform;
             _map = inst.GetComponent<GameMap>();
             _map.Initialize(_transform);
-            _map.InitInfo(mapInfo);
+            _map.GetComponentInChildren<IGameMapHandler>().SetToInitInfo(mapInfo);
         }
 
         private IMapInfo CreateMapInfo()
