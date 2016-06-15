@@ -12,12 +12,6 @@ namespace SimpleTeam.GameOne.Scene
         private ITransformCoordinate _transform;
         private Dictionary<GameObjID, GameObject> _simpluses = new Dictionary<GameObjID, GameObject>();
 
-        private enum HelperStateInfo
-        {
-            None,
-            Update,
-            Init
-        }
         HelperStateInfo _stateInfo;
         object _lockerInfo = new object();
 
@@ -46,22 +40,23 @@ namespace SimpleTeam.GameOne.Scene
         private void CheckInfo()
         {
             if (_stateInfo == HelperStateInfo.None) return;
-
+            KeyValuePair<HelperStateInfo, IMapInfo> pair;
             lock (_lockerInfo)
             {
-                if (_stateInfo == HelperStateInfo.Init)
-                {
-                    DestroySimplus();
-                    InitSimplus();
-                    _stateInfo = HelperStateInfo.Update;
-                }
-
-                if (_stateInfo == HelperStateInfo.Update)
-                {
-                    UpdateSimplus();
-                    _stateInfo = HelperStateInfo.None;
-                }
+                pair = new KeyValuePair<HelperStateInfo, IMapInfo>(_stateInfo, _info);
+                _stateInfo = HelperStateInfo.None;
             }
+            if (pair.Key == HelperStateInfo.Init)
+            {
+                DestroySimplus();
+                InitSimplus();
+                UpdateSimplus();
+            }
+            else if (pair.Key == HelperStateInfo.Update)
+            {
+                UpdateSimplus();
+            }
+
         }
         public void Initialize(ITransformCoordinate tran)
         {
