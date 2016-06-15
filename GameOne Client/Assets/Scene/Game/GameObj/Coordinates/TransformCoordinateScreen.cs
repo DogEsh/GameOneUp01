@@ -1,8 +1,7 @@
-﻿using System;
-using SimpleTeam.GameOne.GameInfo;
+﻿
 using UnityEngine;
 
-namespace SimpleTeam.GameOne.Scene
+namespace SimpleTeam.GameOne.GameInfo
 {
     class TransformCoordinateScreen : ITransformCoordinateScreen
     {

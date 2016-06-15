@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using SimpleTeam.GameOne.GameInfo;
-namespace SimpleTeam.GameOne.Scene
+
+namespace SimpleTeam.GameOne.GameInfo
 {
     public interface ITransformCoordinateAll
     {

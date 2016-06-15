@@ -76,9 +76,13 @@
     <Compile Include="Assets\Scene\Containers\Case.cs" />
     <Compile Include="Assets\Scene\Containers\IMessageContainer.cs" />
     <Compile Include="Assets\Scene\Containers\MessageContainer.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\ConcurrentInfo\ConcurrentInfo.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\ConcurrentInfo\HelperStateInfo.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\ConcurrentInfo\IConcurrentInfo.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\ITransformCoordinateAll.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\ITransformCoordinateScreen.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Coordinates\TransformCoordinateScreen.cs" />
+    <Compile Include="Assets\Scene\Game\GameObj\Simplus\Animation\RegisterSimplusAnimationState.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\Graphics\ISimplusGraphics.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\Handler\ISimplusHandler.cs" />
     <Compile Include="Assets\Scene\Game\GameObj\Simplus\Handler\SimplusHandler.cs" />

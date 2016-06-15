@@ -9,7 +9,7 @@ namespace SimpleTeam.GameOne.Scene
     interface ISimplusHandler
     {
         void SetInfo(ISimplusInfo info);
-        ISimplusInfo GetInfo();
+        ISimplusInfo GetInfo(bool flagReset = false);
         void DestroyLinks();
     }
 }

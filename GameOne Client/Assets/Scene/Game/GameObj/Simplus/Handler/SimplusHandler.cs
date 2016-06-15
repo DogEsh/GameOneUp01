@@ -13,52 +13,34 @@ namespace SimpleTeam.GameOne.Scene
         private GameObject _linkPrefab;
 
 
+        private IConcurrentInfo<ISimplusInfo> _containerInfo = new ConcurrentInfo<ISimplusInfo>();
 
-        private ISimplusInfo _info;
-        HelperStateInfo _stateInfo;
-        object _lockerInfo = new object();
-        private enum HelperStateInfo
-        {
-            None,
-            Update
-        }
-        
+
+
         private void Start()
         {
             _links = new Dictionary<GameObjID, SimplusLink>();
-            _stateInfo = HelperStateInfo.None;
+            //_containerInfo = new ConcurrentInfo<ISimplusInfo>();
             _mySimplus = gameObject.transform.parent.gameObject;
             const string pathLink = "Game/SimplusLinkPrefab";
             _linkPrefab = Resources.Load<GameObject>(pathLink);
         }
 
-        public void SetInfo(ISimplusInfo info)
-        {
-            lock (_lockerInfo)
-            {
-                _info = info;
-                _stateInfo = HelperStateInfo.Update;
-            }
-        }
+
 
         private void Update()
         {
-            if (_stateInfo == HelperStateInfo.None) return;
+            if (_containerInfo.GetState() == HelperStateInfo.None) return;
 
-            lock (_lockerInfo)
-            {
-                if (_stateInfo == HelperStateInfo.Update)
-                {
-                    DestroyExcessLinks();
-                    InitLinks();
-                    UpdateLinks();
-                    _stateInfo = HelperStateInfo.None;
-                }
-            }
+            ISimplusInfo info = GetInfo(true);
+
+            DestroyExcessLinks(info);
+            InitLinks(info);
+            UpdateLinks(info);
         }
-        public void InitLinks()
+        public void InitLinks(ISimplusInfo info)
         {
-            foreach (ISimplusLinkInfo inf in _info.Links)
+            foreach (ISimplusLinkInfo inf in info.Links)
             {
                 if (!_links.ContainsKey(inf.ID))
                 {
@@ -69,11 +51,11 @@ namespace SimpleTeam.GameOne.Scene
                 }
             }
         }
-        public void DestroyExcessLinks()
+        public void DestroyExcessLinks(ISimplusInfo info)
         {
             foreach (GameObjID id in _links.Keys)
             {
-                ISimplusLinkInfo tmp = _info.Links.GetObj(id);
+                ISimplusLinkInfo tmp = info.Links.GetObj(id);
                 if (tmp == null)
                 {
                     Destroy(_links[id].gameObject);
@@ -81,9 +63,9 @@ namespace SimpleTeam.GameOne.Scene
                 }
             }
         }
-        public void UpdateLinks()
+        public void UpdateLinks(ISimplusInfo info)
         {
-            foreach (ISimplusLinkInfo inf in _info.Links)
+            foreach (ISimplusLinkInfo inf in info.Links)
             {
                 _links[inf.ID].UpdateInfo(inf);
             }
@@ -97,14 +79,14 @@ namespace SimpleTeam.GameOne.Scene
             }
             _links = null;
         }
-        public ISimplusInfo GetInfo()
+        public void SetInfo(ISimplusInfo info)
         {
-            ISimplusInfo i;
-            lock (_lockerInfo)
-            {
-                i = _info;
-            }
-            return i;
+            _containerInfo.SetInfo(info, HelperStateInfo.Update);
+        }
+        public ISimplusInfo GetInfo(bool flagReset = false)
+        {
+            KeyValuePair<HelperStateInfo, ISimplusInfo> pair = _containerInfo.GetInfo(flagReset);
+            return pair.Value;
         }
     }
 }

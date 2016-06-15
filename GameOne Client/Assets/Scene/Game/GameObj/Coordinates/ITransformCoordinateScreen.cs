@@ -1,6 +1,6 @@
-﻿using SimpleTeam.GameOne.GameInfo;
+﻿
 
-namespace SimpleTeam.GameOne.Scene
+namespace SimpleTeam.GameOne.GameInfo
 {
     interface ITransformCoordinateScreen : ITransformCoordinate
     {

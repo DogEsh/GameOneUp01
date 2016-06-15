@@ -68,12 +68,13 @@ namespace SimpleTeam.GameOne.Scene
             IGameObjContainer<ISimplusInfo> mySimplus;
             
             mySimplus = new GameObjList<ISimplusInfo>();
-            mySimplus.SetObj(CreateSimlusInfo(0f, 0f, 0.1f));
-            //mySimplus.SetObj(CreateSimlusInfo(0.3f, 0f, 0.1f));
+            mySimplus.SetObj(CreateSimlusInfo(0f, 0f, 0.1f, 3));
+            mySimplus.SetObj(CreateSimlusInfo(0.3f, 0f, 0.1f, 1));
             IMapInfo mapInfo = new MapInfo(16, 9, mySimplus);
             return mapInfo;
         }
-        private ISimplusInfo CreateSimlusInfo(float posX, float posY, float radius)
+        private ushort id = 0;
+        private ISimplusInfo CreateSimlusInfo(float posX, float posY, float radius, uint partyID)
         {
             ISimplusInfo simplus;
             Circle circle;
@@ -82,10 +83,12 @@ namespace SimpleTeam.GameOne.Scene
             ILinkInfoContainer linkContainer;
 
             linkContainer = new LinkInfoList();
-            party = new Party(5);
+            party = new Party(partyID);
             simplusHp = new SimplusHP(10, 100, 10);
             circle = new Circle(new Vector2(posX, posY), radius);
-            simplus = new SimplusInfo(1, circle, simplusHp, party, linkContainer);
+
+            id++;
+            simplus = new SimplusInfo(id, circle, simplusHp, party, linkContainer);
             return simplus;
         }
     }

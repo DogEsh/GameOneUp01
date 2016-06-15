@@ -12,7 +12,6 @@ namespace SimpleTeam.GameOne.Scene
     {
         private ITransformCoordinate _transform;
 
-
         public  GameObjID ID
         {
             get
@@ -30,7 +29,6 @@ namespace SimpleTeam.GameOne.Scene
 
         private void Start()
         { 
-
             ISimplusHandler handler = gameObject.GetComponentInChildren<ISimplusHandler>();
 
             ISimplusInfo info = handler.GetInfo();
