@@ -129,7 +129,7 @@ namespace SimpleTeam.GameOne.Scene
         public void Update()
         {
             if (_container.IsEmpty) return;
-            MessageDataAccount m = _container.Get() as IMessageData as MessageDataAccount;
+            MessageDataAccount m = _container.Get().Data as MessageDataAccount;
 
             if (m.State == _state)
             {

@@ -26,27 +26,19 @@ namespace SimpleTeam.Message
             else _address = address;
         }
 
-        ParameterID IMessageData.ParameterType
+        public IMessageAddress Address
         {
             get
             {
-                return _data.ParameterType;
+                return _address;
             }
         }
 
-        MessageID IMessageID.Type
+        public IMessageData Data
         {
             get
             {
-                return _data.Type;
-            }
-        }
-
-        List<IUserNetwork> IMessageAddress.Users
-        {
-            get
-            {
-                return _address.Users;
+                return _data;
             }
         }
     }

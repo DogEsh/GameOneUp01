@@ -44,6 +44,7 @@
     <Compile Include="BinarySerialization\IPacker.cs" />
     <Compile Include="BinarySerialization\IUnpacker.cs" />
     <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\Scenario\ScenarioSteppable.cs" />
     <Compile Include="Message\Address\IMessageAddress.cs" />
     <Compile Include="Message\Data\IMessageData.cs" />
     <Compile Include="Message\Address\MessageAddress.cs" />
@@ -58,7 +59,7 @@
     <Compile Include="Command\Scenario\ScenarioQueue.cs" />
     <Compile Include="Main\IMain.cs" />
     <Compile Include="Message\Message\IMessage.cs" />
-    <Compile Include="Message\Message\Message.cs" />
+    <Compile Include="Message\Message\MessageRealization.cs" />
     <Compile Include="Network\NetworkStreamParser.cs" />
     <Compile Include="Network\NetworkUserProtocol.cs" />
     <Compile Include="Network\Packet.cs" />
@@ -68,6 +69,9 @@
     <Compile Include="System\ConcurrentSingle.cs" />
     <Compile Include="System\IConcurrentSingle.cs" />
     <Compile Include="System\StateMachine.cs" />
+    <Compile Include="Threading\ISteppable.cs" />
+    <Compile Include="Threading\IThread.cs" />
+    <Compile Include="Threading\ThreadSleepy.cs" />
     <Compile Include="User\IUserNetwork.cs" />
     <Compile Include="User\IUserProfile.cs" />
     <Compile Include="User\UserClient.cs" />

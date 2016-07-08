@@ -28,7 +28,7 @@ namespace SimpleTeam.GameOne.Scene
         {
             MessageDataChat data = message as IMessageData as MessageDataChat;
           
-            IUserProfile user = message.Users[0] as IUserProfile;
+            IUserProfile user = message.Address.Users[0] as IUserProfile;
             //if (user.Nick == String.Empty) return;
             String tmp = DateTime.Now.ToString("T") + "  <<" + user.Nick + ">>:  " + data.Line;
             MessageDataChat d = new MessageDataChat(tmp);

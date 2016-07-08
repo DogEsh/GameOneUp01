@@ -18,8 +18,8 @@ namespace SimpleTeam.Network
         public void ConvertToSend(IMessage message)
         {
             Packet p = null;
-            _packer.CreatePacket(ref p, message);
-            foreach (IUserNetwork user in message.Users)
+            _packer.CreatePacket(ref p, message.Data);
+            foreach (IUserNetwork user in message.Address.Users)
             {
                 user.PacketsSend.Enqueue(p);
             }

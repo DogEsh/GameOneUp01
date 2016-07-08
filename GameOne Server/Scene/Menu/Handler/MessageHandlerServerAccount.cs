@@ -30,9 +30,9 @@ namespace SimpleTeam.GameOne.Scene
         DataSet _data;
         public void SetMessage(IMessage message)
         {
-            MessageDataAccount data = message as IMessageData as MessageDataAccount;
+            MessageDataAccount data = message.Data as MessageDataAccount;
             bool success = false;
-            UserClient user = message.Users[0] as UserClient;
+            UserClient user = message.Address.Users[0] as UserClient;
             if (data.State == MessageDataAccount.StateType.SignUp)
             {
                 success = _data.SignUp(data.Email, data.Password, data.Nick);
@@ -47,7 +47,7 @@ namespace SimpleTeam.GameOne.Scene
                     user.UpdateProfile(p);
 
                     MessageDataProfile dd = new MessageDataProfile(user.Nick, 0);
-                    _handlerScenario.SendToNetwork(dd, message);
+                    _handlerScenario.SendToNetwork(dd, message.Address);
                 }
             }
             else if (data.State == MessageDataAccount.StateType.SignOut)
@@ -64,7 +64,7 @@ namespace SimpleTeam.GameOne.Scene
                 }
             }
             MessageDataAccount ddd = new MessageDataAccount(data.State, success);
-            _handlerScenario.SendToNetwork(ddd, message);
+            _handlerScenario.SendToNetwork(ddd, message.Address);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace SimpleTeam.GameOne.Command
         {
             get
             {
-                return _message.ParameterType;
+                return _message.Data.ParameterType;
             }
         }
 

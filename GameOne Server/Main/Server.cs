@@ -7,7 +7,7 @@ using SimpleTeam.GameOne.Parameter;
 using SimpleTeam.GameOne.Message.Manager;
 using SimpleTeam.GameOne.Scene;
 using SimpleTeam.Main;
-
+using SimpleTeam.Threading;
 
 namespace SimpleTeam.GameOne.Main
 {
@@ -22,7 +22,7 @@ namespace SimpleTeam.GameOne.Main
         SceneServerMenu _sceneMenu;
         SceneServerGame _sceneGame;
         NetworkServerMachine _network;
-        ScenarioMachine _scenario;
+        IThread _scenario;
         private bool _isExit;
         ConsoleCtrl cc;
         public Server()
@@ -34,7 +34,9 @@ namespace SimpleTeam.GameOne.Main
             _network = new NetworkServerMachine(_messagesManager);
             cc = new ConsoleCtrl();
             IAllParameters p = new AllGameOneParameters(this, _sceneMenu, _sceneGame, _messagesManager);
-            _scenario = new ScenarioMachine(p);
+
+            ISteppable sce = new ScenarioSteppable(p);
+            _scenario = new ThreadSleepy(sce, 100);
         }
         public void Start()
         {
@@ -52,9 +54,8 @@ namespace SimpleTeam.GameOne.Main
         private void Close()
         {
             _network.Stop();
-            _scenario.Stop();
-            _network.Close();
             _scenario.Close();
+            _network.Close();
             _network = null;
         }
         private void Go()

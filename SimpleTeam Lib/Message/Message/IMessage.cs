@@ -2,7 +2,9 @@
 
 namespace SimpleTeam.Message
 {
-    public interface IMessage : IMessageData, IMessageAddress
+    public interface IMessage
     {
+        IMessageData Data { get; }
+        IMessageAddress Address { get; }
     }
 }

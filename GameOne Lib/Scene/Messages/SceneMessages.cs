@@ -16,7 +16,7 @@ namespace SimpleTeam.GameOne.Scene
         {
             foreach (IMessageHandler h in _handlers)
             {
-                if (h.Type == message.Type)
+                if (h.Type == message.Data.Type)
                 {
                     h.SetMessage(message);
                 }

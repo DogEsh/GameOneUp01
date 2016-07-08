@@ -74,9 +74,9 @@ namespace SimpleTeam.GameOne.Network
             {
                 IMessage m = _messagesManager.GetMessage();
                 if (m == null) break;
-                if (m.Users.Count == 0)
+                if (m.Address.Users.Count == 0)
                 {
-                    m = new MessageRealization(m, new MessageAddress(_clients));
+                    m = new MessageRealization(m.Data, new MessageAddress(_clients));
                 }
                 _converter.ConvertToSend(m);
             }
